@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import LandingPage from '../components/LandingPage/LandingPage'
-
-
+import HomePage from '../components/app/initial/Home'
 export default function Home() {
   return (
     <div>
@@ -11,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <LandingPage/>
+      <HomePage />
     </div>
   )
 }
