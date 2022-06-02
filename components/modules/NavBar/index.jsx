@@ -1,12 +1,4 @@
-import React from "react";
+import LeftNav from "./LeftNav";
 import TopNav from "./TopNav";
 
-const NavBar = () => {
-  return (
-    <>
-      <TopNav />
-    </>
-  );
-};
-
-export default NavBar;
+export { LeftNav, TopNav };

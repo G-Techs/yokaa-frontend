@@ -2,31 +2,39 @@ import React, { useState } from "react";
 import {
   CloseIcon,
   LoginIcon,
-  MailIcon,
   MenuIcon,
+  MenuOutlineIcon,
   MicrophoneIcon,
   NotificationIcon,
   SeachIcon,
-  SettingIcon,
 } from "../../__modules/Vectors";
+import { openMenuAtom } from "../../../lib/atoms";
+import { useRecoilState } from "recoil";
 
 const TopNav = () => {
   const [isTopMenu, setIsTopMenu] = useState(false);
+  const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
 
   const toggleTopMenu = () => {
     setIsTopMenu(!isTopMenu);
   };
 
   return (
-    <div className="flex w-full fixed top-0 left-0 right-0 justify-between items-center py-4 px-5 font-poppins">
-      <div>
+    <div className="flex fixed top-0 left-20 mobile:left-0 right-0 justify-between items-center py-4 px-5 font-Mulish">
+      <div className="mobile:hidden">
         <ul className="inline-flex font-bold">
           <li className="px-5 hover:text-primary cursor-pointer text-primary">
             Home
           </li>
           <li className="px-5 hover:text-primary cursor-pointer">Latest</li>
-          <li className="px-5 hover:text-primary cursor-pointer">Album</li>
+          <li className="px-5  hover:text-primary cursor-pointer">Album</li>
         </ul>
+      </div>
+      <div className="hidden items-center text-primary mobile:flex">
+        <button onClick={() => setIsMenuOpened(!isMenuOpened)}>
+          <MenuOutlineIcon />
+        </button>
+        <h1 className="px-3 text-2xl font-bold">Yokaa</h1>
       </div>
       <div className="mobile:flex mobile:flex-col">
         <button
@@ -49,16 +57,7 @@ const TopNav = () => {
             <MicrophoneIcon />
           </div>
           <div className="flex">
-            <button className="px-5">
-              <SettingIcon />
-            </button>
-            <button className="pr-5 relative">
-              <MailIcon />
-              <span className="absolute top-0 bg-primary text-xs text-white px-1 rounded-full">
-                5
-              </span>
-            </button>
-            <button className="pr-5 relative">
+            <button className="px-5 relative">
               <NotificationIcon />
               <span className="absolute top-0 bg-primary text-xs text-white px-1 rounded-full">
                 +

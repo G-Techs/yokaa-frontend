@@ -1,10 +1,13 @@
 import React from "react";
-import NavBar from "../modules/NavBar";
+import { LeftNav, TopNav } from "../modules/NavBar";
 
 const LandingPage = () => {
   return (
     <>
-      <NavBar />
+      <div className="absolute left-16">
+        <TopNav />
+      </div>
+      <LeftNav />
     </>
   );
 };

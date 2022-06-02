@@ -13,8 +13,12 @@ module.exports = {
       mobile: { max: "995px" },
     },
     extend: {
+      transitionProperty: {
+        width: "width",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        Mulish: ["Mulish", "sans-serif"],
       },
     },
   },
