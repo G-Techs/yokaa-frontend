@@ -1,6 +1,7 @@
 import {
   BiSearch as SeachIcon,
   BiMicrophone as MicrophoneIcon,
+  BiCategoryAlt as CategoryIcon,
 } from "react-icons/bi";
 import {
   AiOutlineSetting as SettingIcon,
@@ -8,6 +9,7 @@ import {
   AiOutlineLogin as LoginIcon,
   AiOutlineHome as HomeIcon,
   AiOutlineMenu as MenuOutlineIcon,
+  AiOutlinePlayCircle as PlayCircleIcon,
 } from "react-icons/ai";
 import {
   RiNotificationLine as NotificationIcon,
@@ -24,11 +26,14 @@ import {
   BsHeadphones as HeadPhonesIcon,
   BsSun as SunIcon,
   BsMoonFill as MoonIcon,
+  BsPin as PinIcon,
 } from "react-icons/bs";
 import { TbFileMusic as FileMusicIcon } from "react-icons/tb";
 import { CgArrowsExpandUpRight as ArrowExpendUpRighIcon } from "react-icons/cg";
 import { IoDownloadOutline as DownLoadOutlineIcon } from "react-icons/io5";
 import { MdFavoriteBorder as FavoriteIcon } from "react-icons/md";
+import { GiMicrophone as MicIcon } from "react-icons/gi";
+import { RiAdminLine as AdminIcon } from "react-icons/ri";
 
 export {
   SeachIcon,
@@ -52,4 +57,9 @@ export {
   SunIcon,
   MoonIcon,
   MenuOutlineIcon,
+  CategoryIcon,
+  MicIcon,
+  PlayCircleIcon,
+  AdminIcon,
+  PinIcon,
 };
