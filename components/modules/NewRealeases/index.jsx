@@ -52,7 +52,7 @@ const NewReleases = () => {
                                             }} className="px-4">
                                                 {isPlaying === item.artist && isPaused ? <VPause className='w-6 h-6' /> : <VPlay className='w-6 h-6' />}
                                             </div>
-                                            <div><VDots className='w-6 h-6 lg:block hidden' /></div>
+                                            <div><VDots className='w-6 h-6 lg:block hidden text-[#d97706]' /></div>
 
 
                                         </div>
