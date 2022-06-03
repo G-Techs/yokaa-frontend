@@ -10,7 +10,7 @@ module.exports = {
       primary: "#d97706",
     },
     screens: {
-      mobile: { max: "995px" },
+      mobile: { max: "1024px" },
     },
     extend: {
       transitionProperty: {

@@ -1,26 +1,30 @@
 import React, { useState } from "react";
 import {
-  CloseIcon,
   LoginIcon,
-  MenuIcon,
   MenuOutlineIcon,
   MicrophoneIcon,
   NotificationIcon,
   SeachIcon,
+  ChevronRightIcon,
 } from "../../__modules/Vectors";
-import { openMenuAtom } from "../../../lib/atoms";
-import { useRecoilState } from "recoil";
+import { leftNavPinedAtom, openMenuAtom } from "../../../lib/atoms";
+import { useRecoilState, useRecoilValue } from "recoil";
 
 const TopNav = () => {
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
+  const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
 
   const toggleTopMenu = () => {
     setIsTopMenu(!isTopMenu);
   };
 
   return (
-    <div className="flex fixed top-0 left-20 mobile:left-0 right-0 justify-between items-center py-4 px-5 font-Mulish">
+    <div
+      className={`flex fixed top-0 ${
+        !isLeftNavPined ? "left-20 transition-all" : "left-64 transition-all"
+      } mobile:left-0 right-0 justify-between items-center py-4 px-5 font-Mulish`}
+    >
       <div className="mobile:hidden">
         <ul className="inline-flex font-bold">
           <li className="px-5 hover:text-primary cursor-pointer text-primary">
@@ -28,20 +32,25 @@ const TopNav = () => {
           </li>
           <li className="px-5 hover:text-primary cursor-pointer">Latest</li>
           <li className="px-5  hover:text-primary cursor-pointer">Album</li>
+          <li className="px-5  hover:text-primary cursor-pointer">Trending</li>
         </ul>
       </div>
       <div className="hidden items-center text-primary mobile:flex">
         <button onClick={() => setIsMenuOpened(!isMenuOpened)}>
           <MenuOutlineIcon />
         </button>
-        <h1 className="px-3 text-2xl font-bold">Yokaa</h1>
       </div>
+      <h1 className="px-3 text-2xl font-bold text-primary hidden mobile:block">
+        Yokaa
+      </h1>
       <div className="mobile:flex mobile:flex-col">
         <button
           onClick={toggleTopMenu}
           className="text-primary mobile:block hidden"
         >
-          {!isTopMenu ? <MenuIcon /> : <CloseIcon />}
+          <ChevronRightIcon
+            className={`${isTopMenu && "rotate-90"} transition-all`}
+          />
         </button>
         <div
           className={`items-center justify-end ${
