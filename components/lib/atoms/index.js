@@ -1,8 +1,13 @@
 import { atom } from "recoil";
 
 const openMenuAtom = atom({
-  key: "openMenuAton",
+  key: "openMenuAtom",
   default: false,
 });
 
-export { openMenuAtom };
+const leftNavPinedAtom = atom({
+  key: "leftNavPinedAtom",
+  default: false,
+});
+
+export { openMenuAtom, leftNavPinedAtom };
