@@ -9,19 +9,13 @@ const AudioPlayer = ({ tracks }) => {
   // Destructure for conciseness
   const { title, artist, color, image, audioSrc } = tracks[trackIndex];
 
-
-
-
-
   // Refs
-
   const audioRef = useRef(new Audio(audioSrc));
   const intervalRef = useRef();
   const isReady = useRef(false);
 
   // Destructure for conciseness
   const { duration } = audioRef.current;
-
 
   const startTimer = () => {
     // Clear any timers already running
@@ -121,6 +115,10 @@ const AudioPlayer = ({ tracks }) => {
             onNextClick={toNextTrack}
             onPlayPauseClick={setIsPlaying} />
         </div>
+      </div>
+      <div className='flex justify-between'>
+        <p>{trackProgress}</p>
+        <p>-{duration}</p>
       </div>
       <input
         type="range"
