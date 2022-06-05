@@ -6,7 +6,6 @@ const LandingPage = () => {
   return (
     <>
       <NavBar />
-      <Header />
     </>
   );
 };

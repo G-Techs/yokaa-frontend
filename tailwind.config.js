@@ -9,7 +9,11 @@ module.exports = {
       ...defaultColors,
       primary: "#d97706",
     },
-    extend: {},
+    extend: {
+      screens: {
+        mobile: { max: "1000px" },
+      },
+    },
   },
   plugins: [],
 };
