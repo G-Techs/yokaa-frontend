@@ -1,5 +1,7 @@
 import { atom } from "recoil";
 
+// ----------- atom with one value here ------------------------
+
 const openMenuAtom = atom({
   key: "openMenuAtom",
   default: false,
