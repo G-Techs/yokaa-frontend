@@ -21,13 +21,11 @@ const TopNav = () => {
 
   return (
     <div
-      className={`flex fixed top-0 ${
-        !isLeftNavPined ? "left-20 transition-all" : "left-64 transition-all"
-      } mobile:left-0 right-0 justify-between items-center py-4 px-5 font-Mulish`}
+      className={`flex absolute top-0 mobile:left-0 right-0 justify-between items-center py-4 pr-5 font-Mulish`}
     >
       <div className="mobile:hidden">
         <ul className="inline-flex font-bold">
-          <li className="px-5 hover:text-primary cursor-pointer text-primary">
+          <li className="pr-5 hover:text-primary cursor-pointer text-primary">
             Home
           </li>
           <li className="px-5 hover:text-primary cursor-pointer">Latest</li>
