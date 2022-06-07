@@ -14,8 +14,6 @@ const LandingPage = () => {
         } mobile:ml-5`}
       >
         <TopNav />
-        {/* All the landing page components with be here */}
-        <p className="mt-20 text-center">This is the test paragraph</p>
       </div>
       <LeftNav />
     </>
