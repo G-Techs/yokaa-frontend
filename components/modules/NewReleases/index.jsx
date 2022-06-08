@@ -13,10 +13,10 @@ const NewReleases = () => {
     const [isPlaying, setIsPlaying] = useState('')
     const [isPaused, setIsPaused] = useState(false)
     return (
-        <div className="mx-auto w-[88%] ">
+        <div className="mt-20 mr-5 ">
             <p className='text-2xl font-medium'>New Release</p>
-            <div className='w-full lg:h-[30rem] relative overflow-hidden rounded-tr-3xl h-[32rem] rounded-bl-3xl shadow-lg'>
-                <Image layout='fill' src={liveBg} alt="empty" />
+            <div className='w-full  relative overflow-hidden rounded-tr-3xl h-[32rem] rounded-bl-3xl shadow-lg'>
+                <Image layout='fixed' src={liveBg} alt="empty" className='' />
                 <div className='absolute inset-0 text-white'>
                     <div className='grid lg:grid-cols-2 grid-cols-1 h-full'>
                         <div className='flex h-[8rem] flex-col justify-between lg:h-full '>
