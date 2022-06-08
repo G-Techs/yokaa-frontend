@@ -8,7 +8,7 @@ const LandingPage = () => {
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
 
   return (
-    <>
+    <div className="bg-globalBg">
       <div
         className={`relative flex flex-col ${
           !isLeftNavPined ? "ml-28 transition-all" : "transition-all ml-72"
@@ -18,7 +18,7 @@ const LandingPage = () => {
         <TopSongs/>
       </div>
       <LeftNav />
-    </>
+    </div>
   );
 };
 
