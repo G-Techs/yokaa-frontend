@@ -1,3 +1,4 @@
+
 import {
   BiSearch as SeachIcon,
   BiMicrophone as MicrophoneIcon,
@@ -40,6 +41,7 @@ import {
   RiAccountBoxLine as AccountIcon,
 } from "react-icons/ri";
 import { ImProfile as ProfileSheetIcon } from "react-icons/im";
+import { FiChevronRight as ViewMoreIcon } from "react-icons/fi";
 
 export {
   SeachIcon,
@@ -68,8 +70,11 @@ export {
   PlayCircleIcon,
   AdminIcon,
   PinIcon,
+    ViewMoreIcon
   EditProfileIcon,
   ProfileSheetIcon,
   AccountIcon,
   LockIcon,
 };
+
+

@@ -2,6 +2,7 @@ import React from "react";
 import { TopNav, LeftNav } from "../modules/NavBar";
 import { useRecoilValue } from "recoil";
 import { leftNavPinedAtom } from "../lib/atoms";
+import TopSongs from "../modules/TopSongs/TopSongs";
 
 const LandingPage = () => {
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
@@ -14,8 +15,7 @@ const LandingPage = () => {
         } mobile:ml-5`}
       >
         <TopNav />
-        {/* All the landing page components with be here */}
-        <p className="mt-20 text-center">This is the test paragraph</p>
+        <TopSongs/>
       </div>
       <LeftNav />
     </>
