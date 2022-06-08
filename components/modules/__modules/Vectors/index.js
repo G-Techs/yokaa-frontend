@@ -2,6 +2,7 @@ import {
   BiSearch as SeachIcon,
   BiMicrophone as MicrophoneIcon,
   BiCategoryAlt as CategoryIcon,
+  BiLockAlt as LockIcon,
 } from "react-icons/bi";
 import {
   AiOutlineSetting as SettingIcon,
@@ -33,7 +34,12 @@ import { CgArrowsExpandUpRight as ArrowExpendUpRighIcon } from "react-icons/cg";
 import { IoDownloadOutline as DownLoadOutlineIcon } from "react-icons/io5";
 import { MdFavoriteBorder as FavoriteIcon } from "react-icons/md";
 import { GiMicrophone as MicIcon } from "react-icons/gi";
-import { RiAdminLine as AdminIcon } from "react-icons/ri";
+import {
+  RiAdminLine as AdminIcon,
+  RiProfileLine as EditProfileIcon,
+  RiAccountBoxLine as AccountIcon,
+} from "react-icons/ri";
+import { ImProfile as ProfileSheetIcon } from "react-icons/im";
 
 export {
   SeachIcon,
@@ -62,4 +68,8 @@ export {
   PlayCircleIcon,
   AdminIcon,
   PinIcon,
+  EditProfileIcon,
+  ProfileSheetIcon,
+  AccountIcon,
+  LockIcon,
 };
