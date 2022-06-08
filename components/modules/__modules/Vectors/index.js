@@ -34,6 +34,8 @@ import { IoDownloadOutline as DownLoadOutlineIcon } from "react-icons/io5";
 import { MdFavoriteBorder as FavoriteIcon } from "react-icons/md";
 import { GiMicrophone as MicIcon } from "react-icons/gi";
 import { RiAdminLine as AdminIcon } from "react-icons/ri";
+import { FiChevronRight as ViewMoreIcon } from "react-icons/fi";
+
 
 export {
   SeachIcon,
@@ -62,4 +64,5 @@ export {
   PlayCircleIcon,
   AdminIcon,
   PinIcon,
+  ViewMoreIcon
 };
