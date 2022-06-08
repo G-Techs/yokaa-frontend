@@ -8,6 +8,8 @@ module.exports = {
     colors: {
       ...defaultColors,
       primary: "#d97706",
+      globalBg: "#F4F9F9",
+      
     },
     extend: {
       screens: {

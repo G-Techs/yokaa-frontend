@@ -23,7 +23,7 @@ const TopSongCard = ({data}) => {
                 const {id,title,img,artist} = song;
                 return(
                     <div key={id} className="w-full md:w-1/3  lg:w-1/6 " onMouseEnter={hover} onMouseLeave={()=>setOnImageHover(false)} onMouseOver={()=>songHover(id)}>
-                        <div className="m-4 border border-red-200 rounded-bl-2xl rounded-tr-2xl h-50" >
+                        <div className="m-4 border  rounded-bl-2xl rounded-tr-2xl h-50" >
                             <div className="relative flex flex-col justify-center items-center">
                                 <img src={img} alt={artist} className="rounded-bl-2xl rounded-tr-2xl h-full md:h-32 w-full object-cover"/>
                                 <div className={`${onImageHover && id == taggedElement?'absolute':'hidden'}`} 
