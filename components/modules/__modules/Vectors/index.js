@@ -70,7 +70,7 @@ export {
   PlayCircleIcon,
   AdminIcon,
   PinIcon,
-    ViewMoreIcon
+    ViewMoreIcon,
   EditProfileIcon,
   ProfileSheetIcon,
   AccountIcon,
