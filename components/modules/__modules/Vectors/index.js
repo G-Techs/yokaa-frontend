@@ -1,4 +1,3 @@
-
 import {
   BiSearch as SeachIcon,
   BiMicrophone as MicrophoneIcon,
@@ -29,6 +28,8 @@ import {
   BsSun as SunIcon,
   BsMoonFill as MoonIcon,
   BsPin as PinIcon,
+  BsArrowLeft as ArrowLeftIcon,
+  BsArrowRight as ArrowRightIcon,
 } from "react-icons/bs";
 import { TbFileMusic as FileMusicIcon } from "react-icons/tb";
 import { CgArrowsExpandUpRight as ArrowExpendUpRighIcon } from "react-icons/cg";
@@ -70,11 +71,11 @@ export {
   PlayCircleIcon,
   AdminIcon,
   PinIcon,
-    ViewMoreIcon,
+  ViewMoreIcon,
   EditProfileIcon,
   ProfileSheetIcon,
   AccountIcon,
   LockIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
 };
-
-
