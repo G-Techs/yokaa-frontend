@@ -1,21 +1,25 @@
-import React, { useState, useEffect, useRef } from 'react'
-import AudioControls from "./audioControls"
+import React, { useState, useEffect, useRef } from "react";
+import AudioControls from "./audioControls";
 
 const AudioPlayer = ({ tracks }) => {
   // State
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [duration, setDuration] = useState(0);
   // Destructure for conciseness
   const { title, artist, color, image, audioSrc } = tracks[trackIndex];
 
   // Refs
-  const audioRef = useRef(new Audio(audioSrc));
+  const audioRef = useRef(null);
   const intervalRef = useRef();
   const isReady = useRef(false);
 
-  // Destructure for conciseness
-  const { duration } = audioRef.current;
+  useEffect(() => {
+    audioRef.current = new Audio(audioSrc);
+    const { duration } = audioRef.current;
+    setDuration(duration);
+  }, []);
 
   const startTimer = () => {
     // Clear any timers already running
@@ -96,27 +100,28 @@ const AudioPlayer = ({ tracks }) => {
   }, []);
 
   return (
-    <div className='mx-2'>
-
-      <div className='flex justify-between mx-4 items-center'>
-        <div className='flex items-center  w-full'>
-          <div className='w-24 max-w-24 max-h-24 rounded-bl-lg overflow-hidden h-16'>
+    <div className="mx-2">
+      <div className="flex justify-between mx-4 items-center">
+        <div className="flex items-center  w-full">
+          <div className="w-24 max-w-24 max-h-24 rounded-bl-lg overflow-hidden h-16">
             <img src={image} className="object-fit" alt={title} />
           </div>
-          <div className='ml-6 '>
-            <p className='text-2xl'>{title}</p>
+          <div className="ml-6 ">
+            <p className="text-2xl">{title}</p>
             <p>{artist}</p>
           </div>
         </div>
 
-        <div className=''>
-          <AudioControls isPlaying={isPlaying}
+        <div className="">
+          <AudioControls
+            isPlaying={isPlaying}
             onPrevClick={toPrevTrack}
             onNextClick={toNextTrack}
-            onPlayPauseClick={setIsPlaying} />
+            onPlayPauseClick={setIsPlaying}
+          />
         </div>
       </div>
-      <div className='flex justify-between'>
+      <div className="flex justify-between">
         <p>{trackProgress}</p>
         <p>-{duration}</p>
       </div>
@@ -132,9 +137,7 @@ const AudioPlayer = ({ tracks }) => {
         onKeyUp={onScrubEnd}
       />
     </div>
-
   );
 };
 
-
-export default AudioPlayer
+export default AudioPlayer;
