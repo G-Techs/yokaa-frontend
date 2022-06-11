@@ -13,8 +13,7 @@ const newRealeaseBg = {
 };
 
 const NewReleases = () => {
-  const [timeLeft, setTimeLeft] = useState("0");
-  const [isPlaying, setIsPlaying] = useState("");
+  const [isPlaying, setIsPlaying] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   return (
     <div style={newRealeaseBg} className="mt-20 mr-5 bg-white rounded-xl">
@@ -36,9 +35,8 @@ const NewReleases = () => {
               return (
                 <div
                   key={index}
-                  className={` ${
-                    isPlaying === item.artist ? "bg-black bg-opacity-10" : ""
-                  } flex hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md`}
+                  className={` ${isPlaying === index ? "bg-black bg-opacity-10" : ""
+                    } flex hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md`}
                 >
                   <div className="lg:w-20 lg:h-20 max-h-20 w-12 h-12 rounded-br-2xl rounded-tl-2xl overflow-hidden">
                     <img
@@ -56,12 +54,17 @@ const NewReleases = () => {
                   </div>
                   <div
                     onClick={() => {
-                      setIsPlaying(item.artist);
-                      setIsPaused((prev) => !prev);
+                      if (isPlaying === index && !isPaused) {
+                        setIsPaused(true);
+                        setIsPlaying(index);
+                      } else {
+                        setIsPaused(false);
+                      }
+                      setIsPlaying(index);
                     }}
                     className="px-4"
                   >
-                    {isPlaying === item.artist && isPaused ? (
+                    {isPlaying === index && !isPaused ? (
                       <VPause className="w-6 h-6" />
                     ) : (
                       <VPlay className="w-6 h-6" />
