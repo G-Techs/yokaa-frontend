@@ -5,6 +5,7 @@ import {
   BiLockAlt as LockIcon,
 } from "react-icons/bi";
 import {
+  AiOutlinePauseCircle as PauseIcon,
   AiOutlineSetting as SettingIcon,
   AiOutlineMail as MailIcon,
   AiOutlineLogin as LoginIcon,
@@ -78,4 +79,5 @@ export {
   LockIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
+  PauseIcon
 };
