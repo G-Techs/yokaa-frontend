@@ -5,6 +5,8 @@ import { leftNavPinedAtom } from "../lib/atoms";
 import TopSongs from "../modules/TopSongs/TopSongs";
 import HotSongs from "../modules/HotSongs";
 import NewReleases from "../modules/NewReleases";
+import BottomPlayer from "../BottomPaler/BottomPalyer";
+
 
 const LandingPage = () => {
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
@@ -22,6 +24,7 @@ const LandingPage = () => {
         <HotSongs />
       </div>
       <LeftNav />
+      <BottomPlayer/>
     </div>
   );
 };
