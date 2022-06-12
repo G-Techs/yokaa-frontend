@@ -25,9 +25,9 @@ const HotSongsCard = ({ data }) => {
   };
 
   return (
-    <div className="w-1/2 bg-white my-10 px-5 py-5 rounded-xl shadow-xl mx-3 mobile:w-full mobile:mx-0">
+    <div className="w-1/2 bg-white  px-5 py-5 rounded-xl shadow-xl  mobile:w-full mobile:mx-0">
       <div className="flex justify-between items-center pb-5 border-b">
-        <h2 className="font-bold text-2xl">Hot Songs</h2>
+        <h2 className="font-medium text-2xl">Hot Songs</h2>
         <div className="flex">
           <div
             onClick={onScrollLeft}
@@ -63,9 +63,9 @@ const HotSongsCard = ({ data }) => {
                 alt={artist}
                 className="w-14 object-cover h-14 rounded-tl-3xl rounded-full"
               />
-              <div className="px-5">
-                <p className="text-semibold">{title}</p>
-                <p className="text-gray-500 text-xs">{artist}</p>
+              <div className="px-5 capitalize">
+                <p className="font-semibold text-lg">{title}</p>
+                <p className="text-gray-400 text-sm font-medium">{artist}</p>
               </div>
             </div>
           );

@@ -103,16 +103,16 @@ const AudioPlayer = ({ tracks }) => {
     <div className="mx-2">
       <div className="flex justify-between mx-4 items-center">
         <div className="flex items-center  w-full">
-          <div className="w-24 max-w-24 max-h-24 rounded-bl-lg overflow-hidden h-16">
-            <img src={image} className="object-fit" alt={title} />
+          <div className="w-24 max-w-24 max-h-24 rounded-lg overflow-hidden h-16">
+            <img src={image} className="object-fit rounded-lg" alt={title} />
           </div>
-          <div className="ml-6 ">
-            <p className="text-2xl">{title}</p>
-            <p>{artist}</p>
+          <div className="ml-6 font-semibold ">
+            <p className="text-xl">{title}</p>
+            <p className="text-gray-300">{artist}</p>
           </div>
         </div>
 
-        <div className="">
+        <div className="w-32">
           <AudioControls
             isPlaying={isPlaying}
             onPrevClick={toPrevTrack}
@@ -121,11 +121,11 @@ const AudioPlayer = ({ tracks }) => {
           />
         </div>
       </div>
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         <p>{trackProgress}</p>
         <p>-{duration}</p>
-      </div>
-      <input
+      </div> */}
+      {/* <input
         type="range"
         value={trackProgress}
         step="1"
@@ -135,7 +135,7 @@ const AudioPlayer = ({ tracks }) => {
         onChange={(e) => onScrub(e.target.value)}
         onMouseUp={onScrubEnd}
         onKeyUp={onScrubEnd}
-      />
+      /> */}
     </div>
   );
 };

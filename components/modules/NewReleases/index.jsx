@@ -10,14 +10,15 @@ const newRealeaseBg = {
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
+  borderRadius:"20px"
 };
 
 const NewReleases = () => {
   const [isPlaying, setIsPlaying] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   return (
-    <div style={newRealeaseBg} className="mt-20 mr-5 bg-white rounded-xl">
-      <p className="text-2xl font-medium py-5 px-5 bg-white">New Release</p>
+    <div style={newRealeaseBg} className="mt-20 mr-5 bg-white rounded-xl shadow-lg">
+      <p className="text-2xl font-medium py-5 px-5 bg-white text-gray-700">New Release</p>
       <div className="w-full overflow-hidden rounded-tr-3xl h-[32rem] shadow-xl rounded-bl-3xl text-white">
         <div className="grid lg:grid-cols-2 grid-cols-1 h-full">
           <div className="flex h-[8rem] flex-col justify-between lg:h-full ">
