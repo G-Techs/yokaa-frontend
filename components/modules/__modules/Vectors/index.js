@@ -44,6 +44,9 @@ import {
 } from "react-icons/ri";
 import { ImProfile as ProfileSheetIcon } from "react-icons/im";
 import { FiChevronRight as ViewMoreIcon } from "react-icons/fi";
+import { MdLoop as LoopIcon } from "react-icons/md";
+import { RiPlayListLine as PlayListIcon,RiShuffleFill as  ShuffleIcon} from "react-icons/ri";
+import { BsFillVolumeUpFill as VolumeUpIcon,BsFillVolumeMuteFill as VolumeDownIcon} from "react-icons/bs";
 
 export {
   SeachIcon,
@@ -79,5 +82,10 @@ export {
   LockIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
-  PauseIcon
+  PauseIcon,
+  VolumeDownIcon,
+  VolumeUpIcon,
+  LoopIcon,
+  PlayListIcon,
+  ShuffleIcon
 };
