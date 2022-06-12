@@ -5,7 +5,7 @@ import Slider from '@mui/material/Slider';
 
 const BottomPlayer = () => {
   return (
-    <div className='w-full fixed bottom-0 pb-2 pt-3 px-6 md:px-8 flex flex-col md:flex-row justify-between items-center h-28 md:h-20 bg-gray-700 opacity-90'>
+    <div className='z-20 w-full fixed bottom-0 pb-2 pt-3 px-6 md:px-8 flex flex-col md:flex-row justify-between items-center h-28 md:h-20 bg-gray-700 opacity-90'>
     <div className='w-full md:w-3/6 lg:w-2/6 flex box'>
       <div className='w-4/6 gap-2 flex'>
         <img src="https://templates.iqonic.design/muzik/html/images/dashboard/hot-songs/04.png" alt="Keith" className='w-14 md:w-14 md:h-14 rounded-lg' />

@@ -41,7 +41,7 @@ const LeftNav = () => {
     <div
       onMouseOver={() => setIsMouseOverLeftNav(true)}
       onMouseOut={() => setIsMouseOverLeftNav(isLeftNavPined ? true : false)}
-      className={`bg-white shadow-2xl h-full w-fit font-Mulish z-20 fixed top-0 bottom-0 left-0 flex flex-col justify-between  transition-all
+      className={`bg-white shadow-2xl h-full w-fit font-Mulish z-10 fixed top-0 bottom-0 left-0 flex flex-col justify-between  transition-all
       ${!isMenuOpened && "mobile:w-0 mobile:overflow-hidden transition-all"}
       `}
     >
