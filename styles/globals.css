@@ -23,12 +23,19 @@
   background-position: center;
 }
 
-.scroll-snap-container {
-  width: 100%;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+html {
+  overflow-x: hidden;
 }
-.scroll-snap-item {
-  /* width: 100%; */
-  scroll-snap-align: start;
+
+html::-webkit-scrollbar {
+  width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 5rem;
 }
