@@ -29,6 +29,9 @@ import {
   BsSun as SunIcon,
   BsMoonFill as MoonIcon,
   BsPin as PinIcon,
+  BsFillArrowRightCircleFill as ArrowRight,
+  BsFillArrowLeftCircleFill as ArrowLeft,
+
 } from "react-icons/bs";
 import { TbFileMusic as FileMusicIcon } from "react-icons/tb";
 import { CgArrowsExpandUpRight as ArrowExpendUpRighIcon } from "react-icons/cg";
@@ -42,7 +45,6 @@ import {
 } from "react-icons/ri";
 import { ImProfile as ProfileSheetIcon } from "react-icons/im";
 import { FiChevronRight as ViewMoreIcon } from "react-icons/fi";
-
 export {
   SeachIcon,
   MicrophoneIcon,
@@ -70,11 +72,13 @@ export {
   PlayCircleIcon,
   AdminIcon,
   PinIcon,
-    ViewMoreIcon
+  ViewMoreIcon,
   EditProfileIcon,
   ProfileSheetIcon,
   AccountIcon,
   LockIcon,
+  ArrowRight,
+  ArrowLeft,
 };
 
 

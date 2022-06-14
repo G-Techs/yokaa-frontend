@@ -3,6 +3,7 @@ import { TopNav, LeftNav } from "../modules/NavBar";
 import { useRecoilValue } from "recoil";
 import { leftNavPinedAtom } from "../lib/atoms";
 import TopSongs from "../modules/TopSongs/TopSongs";
+import Carousel from "../Carousel/Carousel";
 
 const LandingPage = () => {
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
@@ -16,6 +17,7 @@ const LandingPage = () => {
       >
         <TopNav />
         <TopSongs/>
+        <Carousel/>
       </div>
       <LeftNav />
     </div>
