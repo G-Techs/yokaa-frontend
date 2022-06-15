@@ -32,9 +32,9 @@ const Carousel = () => {
   };
   return (
     <div className="mt-8  p-4 rounded-lg shadow-lg mr-4 bg-white">
-      <div className=" flex justify-between border-b border-gray-300 p-2  ">
-        <p className="font-semibold text-3xl py-2">Featured Albums</p>
-        <div className="flex flex-row space-x-6 ">
+      <div className=" flex sm:justify-between justify-center border-b border-gray-300 p-2  ">
+        <p className="font-medium sm:text-3xl py-2 text-xl">Featured Albums</p>
+        <div className="sm:flex flex-row space-x-4 hidden">
           <button onClick={prevSongs}>
             <ArrowLeft color="#d97706" size={38} />
           </button>
