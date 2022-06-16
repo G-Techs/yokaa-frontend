@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "../../__modules/Vectors";
 import { useSideScroll } from "../../hooks";
+import SongCard from "../../__modules__/Card/SongCard";
 
 const HotSongsCard = ({ data }) => {
   const scrollContainer = useRef(null);
@@ -52,23 +53,7 @@ const HotSongsCard = ({ data }) => {
         className="flex flex-col flex-1 flex-wrap justify-start items-center overflow-y-auto h-72 no-scrollbar scroll-smooth scroll-snap-container"
       >
         {data.map((song) => {
-          const { id, title, img, artist } = song;
-          return (
-            <div
-              key={id}
-              className="flex my-5 items-center w-1/2 mobilesm:w-full scroll-snap-item"
-            >
-              <img
-                src={img}
-                alt={artist}
-                className="w-14 object-cover h-14 rounded-tl-3xl rounded-full"
-              />
-              <div className="px-5 capitalize">
-                <p className="font-semibold text-lg">{title}</p>
-                <p className="text-gray-400 text-sm font-medium">{artist}</p>
-              </div>
-            </div>
-          );
+          return <SongCard song={song} />;
         })}
       </div>
     </div>
