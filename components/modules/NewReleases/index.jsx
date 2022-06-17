@@ -4,26 +4,35 @@ import { songs } from "../utils/dummy";
 import { VDots, VPause, VPlay, VStar, VWave } from "../__modules__/_Vectors";
 import AudioPlayer from "../utils/config/audioPlayer";
 import liveBg from "../static/images/livebg.jpg";
+import equlizer from "../static/images/equalizer.gif";
 
 const newRealeaseBg = {
   backgroundImage: `url(${liveBg.src})`,
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
-  borderRadius:"20px"
+  borderRadius: "20px",
 };
 
 const NewReleases = () => {
   const [isPlaying, setIsPlaying] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   return (
-    <div style={newRealeaseBg} className="mt-20 mr-5 bg-white rounded-xl shadow-lg">
-      <p className="text-2xl font-medium py-5 px-5 bg-white text-gray-700">New Release</p>
+    <div
+      style={newRealeaseBg}
+      className="mt-20 mr-5 bg-white rounded-xl shadow-lg"
+    >
+      <p className="text-2xl font-medium py-5 px-5 bg-white text-gray-700">
+        New Release
+      </p>
       <div className="w-full overflow-hidden rounded-tr-3xl h-[32rem] shadow-xl rounded-bl-3xl text-white">
         <div className="grid lg:grid-cols-2 grid-cols-1 h-full">
           <div className="flex h-[8rem] flex-col justify-between lg:h-full ">
             <div className="lg:w-[10rem] w-full flex justify-center mx-auto my-auto">
-              <VWave className="animate-pulse lg:w-44 lg:h-44 mt-6 w-32 h-32 " />
+              <img
+                src={equlizer.src}
+                className="w-[20rem] h-[20rem] object-cover"
+              />
             </div>
             <div className="lg:block hidden">
               <div className="mx-2 py-1 ">
@@ -36,8 +45,9 @@ const NewReleases = () => {
               return (
                 <div
                   key={index}
-                  className={` ${isPlaying === index ? "bg-black bg-opacity-10" : ""
-                    } flex hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md`}
+                  className={` ${
+                    isPlaying === index ? "bg-black bg-opacity-10" : ""
+                  } flex hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md`}
                 >
                   <div className="lg:w-20 lg:h-20 max-h-20 w-12 h-12 rounded-br-2xl rounded-tl-2xl overflow-hidden">
                     <img

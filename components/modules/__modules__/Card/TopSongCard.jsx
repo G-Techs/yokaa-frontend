@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { PauseIcon, PlayCircleIcon } from "../__modules/Vectors";
+import { PauseIcon, PlayCircleIcon } from "../../__modules/Vectors";
 
 const TopSongCard = ({ data }) => {
-
-  const [isHovering, setIsHovering] = useState(-1)
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [isPlayingIndex, setIsPlayingIndex] = useState(-1)
-
+  const [isHovering, setIsHovering] = useState(-1);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlayingIndex, setIsPlayingIndex] = useState(-1);
 
   return (
     <div className="py-4">
@@ -27,16 +25,27 @@ const TopSongCard = ({ data }) => {
                     alt={artist}
                     className=" rounded-bl-2xl rounded-tr-2xl h-full md:h-44 w-full object-cover"
                   />
-                  <div className={`absolute ${isHovering === index || isPlayingIndex === index ? 'block' : 'hidden'} `} onClick={() => {
-                    if (isPlayingIndex === index && !isPlaying) {
-                      setIsPlaying(true)
-                      setIsPlayingIndex(index)
-                    } else {
-                      setIsPlaying(false)
-                    }
-                    setIsPlayingIndex(index)
-                  }}>
-                    {!isPlaying && isPlayingIndex === index ? <PauseIcon className="w-12 h-12 text-white cursor-pointer hover:bg-blend-darken" /> : <PlayCircleIcon className="text-4xl text-white cursor-pointer hover:bg-blend-darken" />}
+                  <div
+                    className={`absolute ${
+                      isHovering === index || isPlayingIndex === index
+                        ? "block"
+                        : "hidden"
+                    } `}
+                    onClick={() => {
+                      if (isPlayingIndex === index && !isPlaying) {
+                        setIsPlaying(true);
+                        setIsPlayingIndex(index);
+                      } else {
+                        setIsPlaying(false);
+                      }
+                      setIsPlayingIndex(index);
+                    }}
+                  >
+                    {!isPlaying && isPlayingIndex === index ? (
+                      <PauseIcon className="w-12 h-12 text-white cursor-pointer hover:bg-blend-darken" />
+                    ) : (
+                      <PlayCircleIcon className="text-4xl text-white cursor-pointer hover:bg-blend-darken" />
+                    )}
                   </div>
                 </div>
 
