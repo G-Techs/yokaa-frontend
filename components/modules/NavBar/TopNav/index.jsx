@@ -16,8 +16,8 @@ import Link from "next/link";
 const TopNav = () => {
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
-  const [isNotificationModal, setIsNotificationModal] = useState(false);
-  const [isProfileMenuModal, setIsProfileMenuModal] = useState(false);
+  const [isNotificationModal, setIsNotificationModal] = useState(true);
+  const [isProfileMenuModal, setIsProfileMenuModal] = useState(true);
 
   const isloggedIn = false;
 
