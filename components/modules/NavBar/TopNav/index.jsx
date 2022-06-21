@@ -11,8 +11,9 @@ import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
 import NotificationModal from "./__modules/NotificationModal";
 import ProfileMenuModal from "./__modules/ProfileMenuModal";
+import PropsTypes from "prop-types";
 
-const TopNav = () => {
+const TopNav = ({ setIsTopNav }) => {
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
   const [isNotificationModal, setIsNotificationModal] = useState(false);
@@ -30,6 +31,7 @@ const TopNav = () => {
 
   const toggleTopMenu = () => {
     setIsTopMenu(!isTopMenu);
+    setIsTopNav(!isTopMenu);
   };
 
   return (
@@ -125,6 +127,10 @@ const TopNav = () => {
       </div>
     </>
   );
+};
+
+TopNav.propstype = {
+  setIsTopNav: PropsTypes.func,
 };
 
 export default TopNav;
