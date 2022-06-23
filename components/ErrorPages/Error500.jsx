@@ -9,7 +9,7 @@ const Error500 = () => {
         <h1 className="font-black text-6xl">500</h1>
         <h2 className="text-3xl font-black pt-4">Oops! This Page is Not Working.</h2>
         <p className='p-3 text-base text-gray-400'>The requested is Internal Server Error.</p>
-        <div className='flex justify-center items-center rounded-2xl text-white px-4 py-2 bg-red-500 mt-4 cursor-pointer'>
+        <div className='flex justify-center items-center rounded-2xl text-white px-4 py-2 bg-primary mt-4 cursor-pointer'>
           <HomeSubMenuIcon size={16} className="mr-2" />
           <p className='font-lighter text-base'>Back to Home</p>
         </div>
