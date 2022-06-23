@@ -8,16 +8,18 @@ import BottomPlayer from "../../../BottomPaler/BottomPalyer";
 const PageCard = ({ children, setIsTopNav }) => {
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
   return (
-    <div
-      className={`relative flex flex-col ${
-        !isLeftNavPined ? "ml-28 transition-all" : "transition-all ml-72"
-      } mobile:ml-5`}
-    >
-      <TopNav setIsTopNav={setIsTopNav} />
-      {children}
+    <>
+      <div
+        className={`relative flex flex-col ${
+          !isLeftNavPined ? "ml-28 transition-all" : "transition-all ml-72"
+        } mobile:ml-5`}
+      >
+        <TopNav setIsTopNav={setIsTopNav} />
+        {children}
+      </div>
       <LeftNav />
       <BottomPlayer />
-    </div>
+    </>
   );
 };
 

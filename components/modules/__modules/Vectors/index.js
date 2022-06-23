@@ -43,10 +43,20 @@ import {
   RiAccountBoxLine as AccountIcon,
 } from "react-icons/ri";
 import { ImProfile as ProfileSheetIcon } from "react-icons/im";
-import { FiChevronRight as ViewMoreIcon } from "react-icons/fi";
+import {
+  FiChevronRight as ViewMoreIcon,
+  FiTrash2 as VTrash,
+} from "react-icons/fi";
 import { MdLoop as LoopIcon } from "react-icons/md";
-import { RiPlayListLine as PlayListIcon,RiShuffleFill as  ShuffleIcon} from "react-icons/ri";
-import { BsFillVolumeUpFill as VolumeUpIcon,BsFillVolumeMuteFill as VolumeDownIcon} from "react-icons/bs";
+import {
+  RiPlayListLine as PlayListIcon,
+  RiShuffleFill as ShuffleIcon,
+  RiPencilLine as VPen,
+} from "react-icons/ri";
+import {
+  BsFillVolumeUpFill as VolumeUpIcon,
+  BsFillVolumeMuteFill as VolumeDownIcon,
+} from "react-icons/bs";
 
 export {
   SeachIcon,
@@ -87,5 +97,7 @@ export {
   VolumeUpIcon,
   LoopIcon,
   PlayListIcon,
-  ShuffleIcon
+  ShuffleIcon,
+  VPen,
+  VTrash,
 };
