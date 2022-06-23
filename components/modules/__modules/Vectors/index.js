@@ -12,10 +12,12 @@ import {
   AiOutlineHome as HomeIcon,
   AiOutlineMenu as MenuOutlineIcon,
   AiOutlinePlayCircle as PlayCircleIcon,
+  AiOutlineExclamationCircle as ExclamationCircle
 } from "react-icons/ai";
 import {
   RiNotificationLine as NotificationIcon,
   RiMenu3Fill as MenuIcon,
+  RiLayoutTopLine as LayoutTopLine
 } from "react-icons/ri";
 import { IoCloseOutline as CloseIcon } from "react-icons/io5";
 import {
@@ -23,7 +25,7 @@ import {
   FiChevronDown as ChevronDowntIcon,
   FiFilePlus as FilePlusIcon,
 } from "react-icons/fi";
-import { GoHome as HomeSubMenuIcon } from "react-icons/go";
+import { GoHome as HomeSubMenuIcon ,GoClock as Clock} from "react-icons/go";
 import {
   BsHeadphones as HeadPhonesIcon,
   BsSun as SunIcon,
@@ -87,5 +89,8 @@ export {
   VolumeUpIcon,
   LoopIcon,
   PlayListIcon,
-  ShuffleIcon
+  ShuffleIcon,
+  ExclamationCircle,
+  LayoutTopLine,
+  Clock
 };
