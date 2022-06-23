@@ -18,7 +18,7 @@ const TopSongs = () => {
   return (
     <div className=" mt-6 bg-white shadow-xl p-4 pb-0 rounded-xl mr-5 flex flex-col">
       <div className="flex justify-between items-center pb-4 border-b">
-        <h1 className="text-2xl font-medium p-2 px-5 bg-white text-gray-700">
+        <h1 className="text-2xl font-bold p-2 px-5 bg-white text-gray-700">
           Top Songs
         </h1>
         <p

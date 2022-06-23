@@ -27,7 +27,9 @@ const HotSongsByLocation = ({ data, location }) => {
   return (
     <div className="w-1/2 bg-white px-5 py-5 rounded-xl shadow-xl mobile:w-full mobile:mx-0">
       <div className="flex justify-between items-center pb-5 border-b">
-        <h2 className="font-medium text-2xl">Hot Songs {location}</h2>
+        <h2 className="font-bold text-2xl text-gray-700">
+          Hot Songs {location}
+        </h2>
         <div className="flex">
           <div
             onClick={onScrollLeft}

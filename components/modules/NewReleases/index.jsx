@@ -22,7 +22,7 @@ const NewReleases = () => {
       style={newRealeaseBg}
       className="mt-20 mr-5 bg-white rounded-xl shadow-lg"
     >
-      <p className="text-2xl font-medium py-5 px-5 bg-white text-gray-700">
+      <p className="text-2xl  py-5 px-5 bg-white text-gray-700 font-bold">
         New Release
       </p>
       <div className="w-full overflow-hidden rounded-tr-3xl h-[32rem] shadow-xl rounded-bl-3xl text-white">
