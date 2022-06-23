@@ -31,7 +31,9 @@ const ProfileMenuModal = () => {
           <div className="bg-primary p-4 mx-2 rounded-xl bg-opacity-30">
             <EditProfileIcon className="text-primary" />
           </div>
-          <div className="px-5 flex flex-col w-full">
+          <div className="px-5 flex flex-col w-full"
+          onClick={() => router.push("/account/edit")}
+          >
             <p className="font-semibold">Edit Profle</p>
             <p className="text-xs text-gray-500">
               Modify personal profile details
