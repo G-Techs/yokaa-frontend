@@ -38,10 +38,10 @@ const Category = () => {
       <div className="mr-5">
         <table className="border border-gray-300 w-full">
           <tr>
-            <th className="border px-10">No</th>
-            <th className="border px-10">Song Category</th>
-            <th className="border px-10">Category Description</th>
-            <th className="border px-10">Action</th>
+            <th className="border px-10 py-3">No</th>
+            <th className="border px-10 py-3">Song Category</th>
+            <th className="border px-10 py-3">Category Description</th>
+            <th className="border px-10 py-3">Action</th>
           </tr>
           {Array.from({ length: 10 }).map((_, index) => {
             return (
