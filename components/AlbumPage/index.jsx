@@ -4,11 +4,8 @@ import equalizer from "../../components/modules/static/images/equalizer.gif";
 import { topSongsData } from "../dummy_data/topSongsData";
 import BottomPlayer from "../BottomPaler/BottomPalyer";
 import SongCard from "../modules/__modules__/Card/SongCard";
-import { TopNav } from "../modules/NavBar";
-import { LeftNav } from "../modules/NavBar";
 import HotSongs from "../modules/HotSongs";
-import { useRecoilValue } from "recoil";
-import { leftNavPinedAtom } from "../lib/atoms";
+import PageCard from "../modules/__modules__/Card/PageCard";
 
 const albumBg = {
   backgroundImage: `url(${liveBg.src})`,
@@ -18,15 +15,9 @@ const albumBg = {
 };
 
 const AlbumPage = () => {
-  const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
   return (
     <div className="bg-globalBg">
-      <div
-        className={`relative flex flex-col ${
-          !isLeftNavPined ? "ml-28 transition-all" : "transition-all ml-72"
-        } mobile:ml-5`}
-      >
-        <TopNav />
+      <PageCard>
         <div className="flex mt-24 h-[30rem] mobile:h-fit relative mobile:flex-col">
           <div
             className="relative w-full rounded-tr-3xl rounded-bl-3xl flex flex-col"
@@ -57,9 +48,7 @@ const AlbumPage = () => {
           </div>
         </div>
         <HotSongs />
-      </div>
-      <LeftNav />
-      <BottomPlayer />
+      </PageCard>
     </div>
   );
 };
