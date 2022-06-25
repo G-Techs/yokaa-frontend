@@ -2,9 +2,9 @@ import React from 'react'
 
 const ConfirmEmail = () => {
     return (
-        <div className="headphone">
+        <div className="auth h-screen">
             <div className='flex justify-center items-center w-full h-full'>
-                <div className='lg:max-w-[50%] px-5 w-full bg-opacity-10 border border-gray-800 rounded-md backdrop-filter backdrop-blur-lg bg-gray-200 pb-8'>
+                <div className='lg:max-w-[40%] px-5 w-full bg-opacity-10 border border-gray-800 rounded-md backdrop-filter backdrop-blur-lg bg-gray-200 pb-8'>
                     <div className='w-full -mt-12 flex justify-center'>
                         <div className='w-[8rem] ring-2 ring-primary rounded-full overflow-hidden'>
                             <img alt='Pic' src={'https://templates.iqonic.design/muzik/html/images/login/user.png'} />
