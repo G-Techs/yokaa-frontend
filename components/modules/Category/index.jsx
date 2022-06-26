@@ -1,14 +1,17 @@
 import React from "react";
 import { VPen, VTrash } from "../__modules/Vectors";
+import Link from 'next/link'
 
 const Category = () => {
   return (
     <div className="my-24 bg-white flex flex-col w-full border shadow-lg">
       <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <h3 className="font-bold text-2xl">Category Lists</h3>
-        <button className="bg-primary text-white px-4 py-2 rounded-md">
-          Add New Category
-        </button>
+        <Link href="/admin/addcategory">
+          <button className="bg-primary text-white px-4 py-2 rounded-md">
+            Add New Category
+          </button>
+        </Link>
       </div>
       <div className="flex justify-between px-5 py-5">
         <div className="flex items-center">
