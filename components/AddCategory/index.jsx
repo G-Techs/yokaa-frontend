@@ -6,7 +6,7 @@ const AddCategory = () => {
     <>
          <div className="my-24 bg-white flex flex-col shadow-lg mr-5 rounded-xl pt-2">
         <div className="flex justify-between items-center pb-5 border-b">
-            <h2 className="font-bold text-2xl text-gray-700 pl-5">Add Categories</h2>
+            <h2 className="font-bold text-2xl text-gray-700 pl-5 pt-3">Add Categories</h2>
         </div>
             <form className="flex flex-col px-2 py-4 gap-2">
             <div className="flex flex-col px-2 w-full">
