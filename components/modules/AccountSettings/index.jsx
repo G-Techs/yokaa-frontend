@@ -109,8 +109,6 @@ const AccountSettings = ({ isTopNav }) => {
   );
 };
 
-AccountSettings.Propstypes = {
-  isTopNav: PropsTypes.bool.isRequired,
-};
+
 
 export default AccountSettings;
