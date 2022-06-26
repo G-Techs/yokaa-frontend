@@ -27,6 +27,14 @@
   background-size: cover;
   background-position: center;
 }
+.headphone {
+  background: url("./headphones.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
 
 html {
   overflow-x: hidden;
