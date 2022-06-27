@@ -12,8 +12,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        mobile: { max: "1000px" },
-        mobilesm: { max: "500px" },
+        mobile: { max: "1024px" },
+        mobilesm: { max: "690px" },
         mobilexs: { max: "320px" },
       },
     },
