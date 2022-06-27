@@ -1,10 +1,10 @@
 import React from "react";
 import { VPen, VTrash } from "../__modules/Vectors";
-import Link from 'next/link'
+import Link from "next/link";
 
 const Category = () => {
   return (
-    <div className="my-24 bg-white flex flex-col w-full border shadow-lg">
+    <div className="my-24 bg-white flex flex-col mr-5 border shadow-lg rounded-lg">
       <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <h3 className="font-bold text-2xl">Category Lists</h3>
         <Link href="/admin/addcategory">
@@ -40,34 +40,36 @@ const Category = () => {
       </div>
       <div className="mr-5">
         <table className="border border-gray-300 w-full">
-          <tr>
-            <th className="border px-10 py-3">No</th>
-            <th className="border px-10 py-3">Song Category</th>
-            <th className="border px-10 py-3">Category Description</th>
-            <th className="border px-10 py-3">Action</th>
-          </tr>
-          {Array.from({ length: 10 }).map((_, index) => {
-            return (
-              <tr key={index}>
-                <td className="border px-5 py-5">{index + 1}</td>
-                <td className="border px-5">Rock songs</td>
-                <td className="border px-5">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                  !
-                </td>
-                <td className="border px-5">
-                  <div className="flex justify-center items-center">
-                    <button className="bg-primary p-2 rounded-lg text-white">
-                      <VPen />
-                    </button>
-                    <button className="bg-primary p-2 rounded-lg text-white mx-2">
-                      <VTrash />
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
+          <tbody>
+            <tr>
+              <th className="border px-10 py-3">No</th>
+              <th className="border px-10 py-3">Song Category</th>
+              <th className="border px-10 py-3">Category Description</th>
+              <th className="border px-10 py-3">Action</th>
+            </tr>
+            {Array.from({ length: 10 }).map((_, index) => {
+              return (
+                <tr key={index}>
+                  <td className="border px-5 py-5">{index + 1}</td>
+                  <td className="border px-5">Rock songs</td>
+                  <td className="border px-5">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Sunt !
+                  </td>
+                  <td className="border px-5">
+                    <div className="flex justify-center items-center">
+                      <button className="bg-primary p-2 rounded-lg text-white">
+                        <VPen />
+                      </button>
+                      <button className="bg-primary p-2 rounded-lg text-white mx-2">
+                        <VTrash />
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
         </table>
       </div>
     </div>
