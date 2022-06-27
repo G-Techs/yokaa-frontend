@@ -10,7 +10,7 @@ const numberConverter = (value) => {
     const convertedNumber = (value / K_NUMBER_UNIT).toFixed(2) + "K";
     return convertedNumber;
   }
-  return value;
+  return `${value}`;
 };
 
 export default numberConverter;

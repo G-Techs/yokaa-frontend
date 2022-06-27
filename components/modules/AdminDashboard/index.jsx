@@ -3,10 +3,16 @@ import numberConverter from "../utils/helpers/numberConverter";
 import { VImageCard, VRadar, VRefund, VTag } from "../__modules/Vectors";
 import MusicStatisticCard from "./_modules/Cards/MusicStatisticCard";
 import PropsTypes from "prop-types";
+import RevenueStatChart from "./_modules/RevenueStatChart";
+import BestArtist from "./_modules/BestArtist";
 
 const AdminDashboard = ({ isTopNav }) => {
   return (
-    <div className={`my-24 mr-5 ${isTopNav && "my-40"} transition-all`}>
+    <div
+      className={`my-24 mr-5 ${
+        isTopNav && "my-40"
+      } transition-all flex flex-col gap-5 h-full`}
+    >
       <div className="flex gap-5 mobile:grid mobile:grid-cols-2 mobilesm:grid-cols-1">
         <MusicStatisticCard
           statTitle="Music Artist"
@@ -36,6 +42,14 @@ const AdminDashboard = ({ isTopNav }) => {
           iconColorClassName="text-[#00d0ff]"
           iconBgClassName="bg-[#00d0ff]"
         />
+      </div>
+      <div className="flex gap-5 w-full mobile:flex-col">
+        <div className="w-2/3 mobile:w-full">
+          <RevenueStatChart />
+        </div>
+        <div className="w-2/5 h-auto mobile:w-full">
+          <BestArtist />
+        </div>
       </div>
     </div>
   );

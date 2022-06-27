@@ -3,7 +3,7 @@ import AdminDashboardPage from "../../components/AdminDashboardPage";
 
 const dashboard = () => {
   return (
-    <div className="bg-globalBg h-screen">
+    <div className="bg-globalBg mobile:h-fit h-screen">
       <AdminDashboardPage />
     </div>
   );
