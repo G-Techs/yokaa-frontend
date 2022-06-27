@@ -9,12 +9,11 @@ module.exports = {
       ...defaultColors,
       primary: "#d97706",
       globalBg: "#F4F9F9",
-      
     },
     extend: {
       screens: {
-        mobile: { max: "1000px" },
-        mobilesm: { max: "414px" },
+        mobile: { max: "1024px" },
+        mobilesm: { max: "690px" },
         mobilexs: { max: "320px" },
       },
     },

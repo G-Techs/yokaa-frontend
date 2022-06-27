@@ -1,24 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    @variants responsive {
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
+* {
+  font-family: "Poppins", sans-serif;
+}
 
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-      }
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
   }
+}
 .auth {
   background: url("https://images.unsplash.com/photo-1610041321327-b794c052db27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGVhZHNldHxlbnwwfHwwfHw%3D&w=1000&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+.headphone {
+  background: url("./headphones.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 5rem;
+}
+

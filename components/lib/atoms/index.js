@@ -12,4 +12,9 @@ const leftNavPinedAtom = atom({
   default: false,
 });
 
-export { openMenuAtom, leftNavPinedAtom };
+const displaySettingsModalAtom = atom({
+  key: "displaysettingsModalAtom",
+  default: false,
+});
+
+export { openMenuAtom, leftNavPinedAtom, displaySettingsModalAtom };

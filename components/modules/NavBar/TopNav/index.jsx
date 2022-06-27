@@ -11,12 +11,14 @@ import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
 import NotificationModal from "./__modules/NotificationModal";
 import ProfileMenuModal from "./__modules/ProfileMenuModal";
+import PropsTypes from "prop-types";
+import Link from "next/link";
 
-const TopNav = () => {
+const TopNav = ({ setIsTopNav }) => {
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
-  const [isNotificationModal, setIsNotificationModal] = useState(false);
-  const [isProfileMenuModal, setIsProfileMenuModal] = useState(false);
+  const [isNotificationModal, setIsNotificationModal] = useState(true);
+  const [isProfileMenuModal, setIsProfileMenuModal] = useState(true);
 
   const isloggedIn = false;
 
@@ -30,6 +32,7 @@ const TopNav = () => {
 
   const toggleTopMenu = () => {
     setIsTopMenu(!isTopMenu);
+    setIsTopNav(!isTopMenu);
   };
 
   return (
@@ -37,14 +40,22 @@ const TopNav = () => {
       <div className="flex absolute top-0 left-0 right-0 justify-between items-center py-4 pr-5 font-Mulish">
         <div className="mobile:hidden">
           <ul className="inline-flex font-bold">
-            <li className="pr-5 hover:text-primary cursor-pointer text-primary">
-              Home
-            </li>
-            <li className="px-5 hover:text-primary cursor-pointer">Latest</li>
-            <li className="px-5  hover:text-primary cursor-pointer">Album</li>
-            <li className="px-5  hover:text-primary cursor-pointer">
-              Trending
-            </li>
+            <Link href="/">
+              <li className="pr-5 hover:text-primary cursor-pointer text-primary">
+                Home
+              </li>
+            </Link>
+            <Link href="/latest">
+              <li className="px-5 hover:text-primary cursor-pointer">Latest</li>
+            </Link>
+            <Link href="/album">
+              <li className="px-5  hover:text-primary cursor-pointer">Album</li>
+            </Link>
+            <Link href="/trending">
+              <li className="px-5  hover:text-primary cursor-pointer">
+                Trending
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="hidden items-center text-primary mobile:flex">
@@ -127,6 +138,8 @@ const TopNav = () => {
   );
 };
 
+TopNav.propstype = {
+  setIsTopNav: PropsTypes.func,
+};
+
 export default TopNav;
-
-

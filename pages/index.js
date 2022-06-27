@@ -9,7 +9,6 @@ export default function Home() {
         <meta name="description" content="Yokaa music live streaming platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <LandingPage />
     </div>
   );
