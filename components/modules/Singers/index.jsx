@@ -12,7 +12,7 @@ const Singers = ({ isTopNav }) => {
     >
       <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <h3 className="font-bold text-2xl">Singer Lists</h3>
-        <Link href="/admin/addsong">
+        <Link href="/admin/addnewsong">
           <button className="bg-primary text-white px-4 py-2 rounded-2xl mobilesm:text-xs">
             Add New Singer
           </button>
