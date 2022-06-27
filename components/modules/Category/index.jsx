@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const Category = () => {
   return (
-    <div className="my-24 bg-white flex flex-col mr-5 border shadow-lg rounded-lg">
+    <div className="my-24 bg-white flex flex-col mr-5 border shadow-lg rounded-lg overflow-x-auto">
       <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <h3 className="font-bold text-2xl">Category Lists</h3>
         <Link href="/admin/addcategory">
-          <button className="bg-primary text-white px-4 py-2 rounded-md">
+          <button className="bg-primary text-white px-4 py-2 rounded-md mobilesm:text-xs">
             Add New Category
           </button>
         </Link>
       </div>
-      <div className="flex justify-between px-5 py-5">
+      <div className="flex mobilesm:flex-col mobilesm:gap-3 justify-between px-5 py-5">
         <div className="flex items-center">
           <label htmlFor="numberOfItem">Show</label>
           <select
@@ -27,8 +27,8 @@ const Category = () => {
           </select>
           <p>entries</p>
         </div>
-        <div>
-          <label htmlFor="searchItem" className="px-4">
+        <div className="mobilesm:flex flex-col">
+          <label htmlFor="searchItem" className="px-4 mobilesm:px-0">
             Search:
           </label>
           <input
