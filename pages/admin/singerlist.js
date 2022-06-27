@@ -3,7 +3,9 @@ import SingerListPage from '../../components/SingerListPage'
 
 const singerlist = () => {
   return (
-    <SingerListPage/>
+    <div className="bg-globalBg h-screen">
+        <SingerListPage/>
+    </div>
   )
 }
 
