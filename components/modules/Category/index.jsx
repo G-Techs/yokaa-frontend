@@ -1,10 +1,10 @@
 import React from "react";
 import { VPen, VTrash } from "../__modules/Vectors";
-import Link from 'next/link'
+import Link from "next/link";
 
 const Category = () => {
   return (
-    <div className="my-24 bg-white flex flex-col w-full border shadow-lg">
+    <div className="my-24 bg-white flex flex-col mr-5 border shadow-lg rounded-lg">
       <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <h3 className="font-bold text-2xl">Category Lists</h3>
         <Link href="/admin/addcategory">
