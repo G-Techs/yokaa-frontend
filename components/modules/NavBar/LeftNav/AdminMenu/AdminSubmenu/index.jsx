@@ -26,12 +26,15 @@ const AdminSubmenu = () => {
           Category
         </li>
       </Link>
-      <li className="px-5 flex items-center py-2 hover:text-primary transition-all cursor-pointer">
-        <span className="p-2 bg-gray-200 mx-1 rounded-lg">
-          <MicIcon />
-        </span>
-        Singer
-      </li>
+      <Link href="/admin/singerlist">
+        <li className="px-5 flex items-center py-2 hover:text-primary transition-all cursor-pointer">
+          <span className="p-2 bg-gray-200 mx-1 rounded-lg">
+            <MicIcon />
+          </span>
+          Singer 
+        </li>
+      </Link>
+
       <li className="px-5 flex items-center py-2 hover:text-primary transition-all cursor-pointer">
         <span className="p-2 bg-gray-200 mx-1 rounded-lg">
           <PlayCircleIcon />
