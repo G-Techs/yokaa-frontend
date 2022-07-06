@@ -3,9 +3,7 @@ import ConfirmEmail from "../components/Auth/confirmEmail";
 
 const ConfirmEmailPage = () => {
     return (
-        <>
-            <ConfirmEmail />
-        </>
+        <ConfirmEmail />
     );
 };
 
