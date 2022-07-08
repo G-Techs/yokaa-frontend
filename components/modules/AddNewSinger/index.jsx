@@ -1,5 +1,5 @@
 import React from "react";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const AddNewSinger = () => {
   return (
@@ -19,16 +19,16 @@ const AddNewSinger = () => {
               type="text"
               name="singer-name"
               className="bg-transparent border  px-3 transition-all py-2 rounded-md outline-none"
-            /> 
+            />
           </div>
           <div className="flex flex-col px-2 w-full">
             <label for="profile" className="pb-2">
-            Singer Profile:
+              Singer Profile:
             </label>
-              <input
-                type="file"
-                name="profile"
-                className="
+            <input
+              type="file"
+              name="profile"
+              className="
                 flex
                 file:mr-4 file:py-2 file:px-4
                 file:rounded-full file:border-0
@@ -38,7 +38,7 @@ const AddNewSinger = () => {
                 hover:file:bg-gray-100
                 hover:file:shadow-lg
                 bg-transparent border  px-3 transition-all py-2 rounded-md outline-none"
-              />  
+            />
           </div>
           <div className="flex flex-col px-2 w-full">
             <label for="email" className="pb-2">
@@ -48,11 +48,11 @@ const AddNewSinger = () => {
               type="email"
               name="email"
               className="bg-transparent border  px-3 transition-all py-2 rounded-md outline-none"
-            />  
+            />
           </div>
           <div className="flex flex-col px-2 ">
             <label for="category-name" className="py-2">
-            Singer Description:
+              Singer Description:
             </label>
             <textarea
               name="category-name"
@@ -78,7 +78,7 @@ const AddNewSinger = () => {
   );
 };
 
-AddNewSinger.Propstypes = {
-  isTopNav: PropsTypes.bool.isRequired,
+AddNewSinger.propTypes = {
+  isTopNav: PropTypes.bool.isRequired,
 };
 export default AddNewSinger;

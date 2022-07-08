@@ -1,5 +1,5 @@
 import React from "react";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const AccountSettings = ({ isTopNav }) => {
   return (
@@ -108,7 +108,5 @@ const AccountSettings = ({ isTopNav }) => {
     </div>
   );
 };
-
-
 
 export default AccountSettings;

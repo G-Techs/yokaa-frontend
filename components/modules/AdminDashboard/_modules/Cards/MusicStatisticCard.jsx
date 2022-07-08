@@ -1,6 +1,6 @@
 import React from "react";
 import { VInfo, VStatsChart } from "../../../__modules/Vectors";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const MusicStatisticCard = ({
   statTitle,
@@ -35,11 +35,11 @@ const MusicStatisticCard = ({
 };
 
 MusicStatisticCard.propTypes = {
-  statTitle: PropsTypes.string.isRequired,
-  statValue: PropsTypes.string.isRequired,
-  statIcon: PropsTypes.element.isRequired,
-  iconColorClassName: PropsTypes.string.isRequired,
-  iconBgClassName: PropsTypes.string.isRequired,
+  statTitle: PropTypes.string.isRequired,
+  statValue: PropTypes.string.isRequired,
+  statIcon: PropTypes.element.isRequired,
+  iconColorClassName: PropTypes.string.isRequired,
+  iconBgClassName: PropTypes.string.isRequired,
 };
 
 export default MusicStatisticCard;

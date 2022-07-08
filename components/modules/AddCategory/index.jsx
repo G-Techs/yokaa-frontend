@@ -1,5 +1,5 @@
 import React from "react";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const AddCategory = () => {
   return (
@@ -49,7 +49,7 @@ const AddCategory = () => {
   );
 };
 
-AddCategory.Propstypes = {
-  isTopNav: PropsTypes.bool.isRequired,
+AddCategory.propTypes = {
+  isTopNav: PropTypes.bool.isRequired,
 };
 export default AddCategory;

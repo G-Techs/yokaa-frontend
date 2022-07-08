@@ -19,18 +19,24 @@ const BottomPlayer = ({ isFixed = true }) => {
           : "absolute justify-center items-center"
       } bottom-0 pb-2 pt-3 px-6 md:px-8 flex flex-col md:flex-row items-center h-28 md:h-20 opacity-90`}
     >
-      <div className="w-full md:w-3/6 lg:w-2/6 flex box">
-        <div className={`w-4/6 gap-2 flex ${!isFixed && "hidden"}`}>
-          <img
-            src="https://templates.iqonic.design/muzik/html/images/dashboard/hot-songs/04.png"
-            alt="Keith"
-            className="w-14 md:w-14 md:h-14 rounded-lg"
-          />
-          <div className="text-lg font-semibold text-gray-300 capitalize">
-            <h1>Tell me u luv me</h1>
-            <p className="text-base font-medium">Keith Urban</p>
+      <div
+        className={`${
+          isFixed ? "w-full md:w-3/6 lg:w-2/6 flex box" : "hidden"
+        }`}
+      >
+        {isFixed && (
+          <div className={`w-4/6 gap-2 flex`}>
+            <img
+              src="https://templates.iqonic.design/muzik/html/images/dashboard/hot-songs/04.png"
+              alt="Keith"
+              className="w-14 md:w-14 md:h-14 rounded-lg"
+            />
+            <div className="text-lg font-semibold text-gray-300 capitalize">
+              <h1>Tell me u luv me</h1>
+              <p className="text-base font-medium">Keith Urban</p>
+            </div>
           </div>
-        </div>
+        )}
         <div className="md:hidden w-2/6 flex gap-2 m-auto">
           <VPrev className="w-8 h-8 cursor-pointer text-gray-200" />
           <VPlay className="w-8 h-8 cursor-pointer text-gray-200" />

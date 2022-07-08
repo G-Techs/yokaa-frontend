@@ -58,11 +58,16 @@ const Singers = ({ isTopNav }) => {
                 <tr key={index}>
                   <td className="border px-5 py-5">{index + 1}</td>
                   <td className="border mx-0 flex justify-center items-center">
-                    <img src="https://templates.iqonic.design/muzik/html/images/user/04.jpg" className="w-16 h-16 m-2 rounded-2xl" alt={index} />
+                    <img
+                      src="https://templates.iqonic.design/muzik/html/images/user/04.jpg"
+                      className="w-16 h-16 m-2 rounded-2xl"
+                      alt={index}
+                    />
                   </td>
                   <td className="border px-5">galiendcodes13@gmail.com</td>
                   <td className="border px-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quasi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum, quasi.
                   </td>
                   <td className="border px-5">
                     <div className="flex justify-center items-center">
@@ -84,7 +89,7 @@ const Singers = ({ isTopNav }) => {
   );
 };
 
-Singers.propsTypes = {
+Singers.propTypes = {
   isTopNav: PropTypes.bool.isRequired,
 };
 

@@ -11,23 +11,25 @@ import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
 import NotificationModal from "./__modules/NotificationModal";
 import ProfileMenuModal from "./__modules/ProfileMenuModal";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 import Link from "next/link";
 
 const TopNav = ({ setIsTopNav }) => {
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
-  const [isNotificationModal, setIsNotificationModal] = useState(true);
-  const [isProfileMenuModal, setIsProfileMenuModal] = useState(true);
+  const [isNotificationModal, setIsNotificationModal] = useState(false);
+  const [isProfileMenuModal, setIsProfileMenuModal] = useState(false);
 
   const isloggedIn = false;
 
   const toggleNoticationNavModals = () => {
     setIsNotificationModal(!isNotificationModal);
+    setIsProfileMenuModal(false);
   };
 
   const toggleProfileNavModals = () => {
     setIsProfileMenuModal(!isProfileMenuModal);
+    setIsNotificationModal(false);
   };
 
   const toggleTopMenu = () => {
@@ -51,7 +53,7 @@ const TopNav = ({ setIsTopNav }) => {
             <Link href="/album">
               <li className="px-5  hover:text-primary cursor-pointer">Album</li>
             </Link>
-            <Link href="/trending">
+            <Link href="#">
               <li className="px-5  hover:text-primary cursor-pointer">
                 Trending
               </li>
@@ -117,20 +119,16 @@ const TopNav = ({ setIsTopNav }) => {
         </div>
       </div>
       <div
-        className={`${isTopMenu ? "mobile:block" : "mobile:hidden"} ${
-          isNotificationModal
-            ? "scale-y-0 transition-all"
-            : "scale-y-100 transition-all"
-        }`}
+        className={`z-50 transition-all ${
+          isTopMenu ? "mobile:block" : "mobile:hidden"
+        } ${isNotificationModal ? "-translate-x-10" : "translate-x-96"}`}
       >
         <NotificationModal />
       </div>
       <div
-        className={`${isTopMenu ? "mobile:block" : "mobile:hidden"} ${
-          isProfileMenuModal
-            ? "scale-y-0 transition-all"
-            : "scale-y-100 transition-all"
-        }`}
+        className={`z-50 transition-all ${
+          isTopMenu ? "mobile:block" : "mobile:hidden"
+        } ${isProfileMenuModal ? "translate-x-0" : "translate-x-96"}`}
       >
         <ProfileMenuModal />
       </div>
@@ -139,7 +137,7 @@ const TopNav = ({ setIsTopNav }) => {
 };
 
 TopNav.propstype = {
-  setIsTopNav: PropsTypes.func,
+  setIsTopNav: PropTypes.func,
 };
 
 export default TopNav;
