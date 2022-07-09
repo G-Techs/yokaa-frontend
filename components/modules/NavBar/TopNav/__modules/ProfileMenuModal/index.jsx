@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 const ProfileMenuModal = () => {
   const router = useRouter();
   return (
-    <div className="mt-20 bg-white w-72 rounded-2xl absolute right-0 mx-5 z-10 mobile:mt-32">
+    <div className="mt-20 bg-white w-72 rounded-2xl absolute right-0 mx-5 z-50  mobile:mt-32">
       <div className="flex flex-col bg-primary text-white justify-start py-3 px-3 rounded-t-2xl">
         <p>Hello G-Tech</p>
         <p className="font-thin">Available</p>
@@ -31,8 +31,9 @@ const ProfileMenuModal = () => {
           <div className="bg-primary p-4 mx-2 rounded-xl bg-opacity-30">
             <EditProfileIcon className="text-primary" />
           </div>
-          <div className="px-5 flex flex-col w-full"
-          onClick={() => router.push("/account/edit")}
+          <div
+            className="px-5 flex flex-col w-full"
+            onClick={() => router.push("/account/edit")}
           >
             <p className="font-semibold">Edit Profle</p>
             <p className="text-xs text-gray-500">

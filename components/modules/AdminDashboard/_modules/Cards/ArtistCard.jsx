@@ -1,5 +1,5 @@
 import React from "react";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const ArtistCard = ({
   artistAvatar,
@@ -31,13 +31,13 @@ const ArtistCard = ({
   );
 };
 
-ArtistCard.propsTypes = {
-  artistAvatar: PropsTypes.string.isRequired,
-  artistName: PropsTypes.string.isRequired,
-  date: PropsTypes.string.isRequired,
-  streams: PropsTypes.string.isRequired,
-  streamsBgClassName: PropsTypes.string.isRequired,
-  borderColorClassName: PropsTypes.string.isRequired,
+ArtistCard.propTypes = {
+  artistAvatar: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  streams: PropTypes.string.isRequired,
+  streamsBgClassName: PropTypes.string.isRequired,
+  borderColorClassName: PropTypes.string.isRequired,
 };
 
 export default ArtistCard;

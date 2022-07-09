@@ -81,7 +81,7 @@ const Category = ({ isTopNav }) => {
   );
 };
 
-Category.propsTypes = {
+Category.propTypes = {
   isTopNav: PropTypes.bool.isRequired,
 };
 

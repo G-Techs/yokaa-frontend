@@ -18,12 +18,12 @@ const TopSongCard = ({ data }) => {
               onMouseOver={() => setIsHovering(index)}
               onMouseLeave={() => setIsHovering(-1)}
             >
-              <div className="m-4  border  rounded-bl-2xl rounded-tr-2xl h-50">
-                <div className=" flex flex-col justify-center items-center">
+              <div className="m-4 border rounded-bl-2xl rounded-tr-2xl h-50">
+                <div className="flex flex-col justify-center items-center">
                   <img
                     src={img}
                     alt={artist}
-                    className=" rounded-bl-2xl rounded-tr-2xl h-full md:h-44 w-full object-cover"
+                    className="rounded-bl-2xl w-full rounded-tr-2xl h-full md:h-44 object-cover"
                   />
                   <div
                     className={`absolute ${

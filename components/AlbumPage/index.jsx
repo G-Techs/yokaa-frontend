@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import liveBg from "../../components/modules/static/images/livebg.jpg";
 import equalizer from "../../components/modules/static/images/equalizer.gif";
 import { topSongsData } from "../dummy_data/topSongsData";
@@ -15,10 +15,15 @@ const albumBg = {
 };
 
 const AlbumPage = () => {
+  const [isTopNav, setIsTopNav] = useState(false);
   return (
     <div className="bg-globalBg">
-      <PageCard>
-        <div className="flex mt-24 h-[30rem] mobile:h-fit relative mobile:flex-col">
+      <PageCard setIsTopNav={setIsTopNav}>
+        <div
+          className={`flex mt-24 h-[30rem] mobile:h-fit relative mobile:flex-col transition-all ${
+            isTopNav && "mt-40"
+          }`}
+        >
           <div
             className="relative w-full rounded-tr-3xl rounded-bl-3xl flex flex-col"
             style={albumBg}

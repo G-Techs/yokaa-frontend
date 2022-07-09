@@ -4,7 +4,7 @@ import { songs } from "../utils/dummy";
 import { VDots, VPause, VPlay, VStar, VWave } from "../__modules__/_Vectors";
 import AudioPlayer from "../utils/config/audioPlayer";
 import liveBg from "../static/images/livebg.jpg";
-import equlizer from "../static/images/equalizer.gif";
+import equalizer from "../static/images/equalizer.gif";
 
 const newRealeaseBg = {
   backgroundImage: `url(${liveBg.src})`,
@@ -19,18 +19,23 @@ const NewReleases = () => {
   const [isPaused, setIsPaused] = useState(false);
   return (
     <div
-      style={newRealeaseBg}
-      className="mt-20 mr-5 bg-white rounded-xl shadow-lg"
+      // style={newRealeaseBg}
+      className="mt-20 mr-5 bg-white shadow-lg rounded-bl-[50px]"
     >
       <p className="text-2xl  py-5 px-5 bg-white text-gray-700 font-bold">
         New Release
       </p>
-      <div className="w-full overflow-hidden rounded-tr-3xl h-[32rem] shadow-xl rounded-bl-3xl text-white">
-        <div className="grid lg:grid-cols-2 grid-cols-1 h-full">
+      <div className="w-full relative overflow-hidden h-[32rem] rounded-bl-[50px] shadow-xl text-white">
+        <img
+          src={liveBg.src}
+          alt="live background"
+          className="absolute h-full w-full object-cover rounded-tr-[50px] rounded-bl-[50px]"
+        />
+        <div className="grid lg:grid-cols-2 grid-cols-1 h-full absolute w-full">
           <div className="flex h-[8rem] flex-col justify-between lg:h-full ">
             <div className="lg:w-[10rem] w-full flex justify-center mx-auto my-auto">
               <img
-                src={equlizer.src}
+                src={equalizer.src}
                 className="w-[20rem] h-[20rem] object-cover"
               />
             </div>

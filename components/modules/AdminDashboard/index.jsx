@@ -2,7 +2,7 @@ import React from "react";
 import numberConverter from "../utils/helpers/numberConverter";
 import { VImageCard, VRadar, VRefund, VTag } from "../__modules/Vectors";
 import MusicStatisticCard from "./_modules/Cards/MusicStatisticCard";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 import RevenueStatChart from "./_modules/RevenueStatChart";
 import BestArtist from "./_modules/BestArtist";
 
@@ -55,8 +55,8 @@ const AdminDashboard = ({ isTopNav }) => {
   );
 };
 
-AdminDashboard.propsTypes = {
-  isTopNav: PropsTypes.bool.isRequired,
+AdminDashboard.propTypes = {
+  isTopNav: PropTypes.bool.isRequired,
 };
 
 export default AdminDashboard;
