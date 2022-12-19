@@ -1,8 +1,9 @@
-// import React from "react";
+import React from "react";
 // import AccountSettingsPage from "../../components/AccountSettingPage";
 
-// const setting = () => {
-//   return (<AccountSettingsPage />);
-// };
+const setting = () => {
+  // return (<AccountSettingsPage />);
+  return <></>;
+};
 
-// export default setting;
+export default setting;

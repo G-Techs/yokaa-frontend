@@ -1,12 +1,14 @@
-import React from 'react'
-import SingerListPage from '../../components/SingerListPage'
+import React from "react";
+// import SingerListPage from "../../components/SingerListPage";
 
 const singerlist = () => {
-  return (
-    <div className="bg-globalBg h-screen">
-        <SingerListPage/>
-    </div>
-  )
-}
+  // return (
+  //   <div className="bg-globalBg h-screen">
+  //       <SingerListPage/>
+  //   </div>
+  // )
 
-export default singerlist
+  return <></>;
+};
+
+export default singerlist;

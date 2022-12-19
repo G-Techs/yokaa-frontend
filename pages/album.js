@@ -1,12 +1,8 @@
-// import React from "react";
+import React from "react";
 // import AlbumPage from "../components/AlbumPage";
 
-// const album = () => {
-//   return (
-//     <>
-//       <AlbumPage />
-//     </>
-//   );
-// };
+const album = () => {
+  return <>{/* <AlbumPage /> */}</>;
+};
 
-// export default album;
+export default album;

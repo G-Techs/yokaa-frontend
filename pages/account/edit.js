@@ -1,9 +1,7 @@
-// import React from 'react'
+import React from "react";
 
-// const edit = () => {
-//   return (
-//     <div>edit</div>
-//   )
-// }
+const edit = () => {
+  return <div>edit</div>;
+};
 
-// export default edit
+export default edit;
