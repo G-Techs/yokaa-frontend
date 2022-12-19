@@ -1,12 +1,12 @@
-import React from "react";
-import ResetPassword from "../components/Auth/ResetPassword";
+// import React from "react";
+// import ResetPassword from "../components/Auth/ResetPassword";
 
-const ResetPasswordPage = () => {
-    return (
-        <>
-            <ResetPassword />
-        </>
-    );
-};
+// const ResetPasswordPage = () => {
+//     return (
+//         <>
+//             <ResetPassword />
+//         </>
+//     );
+// };
 
-export default ResetPasswordPage;
+// export default ResetPasswordPage;

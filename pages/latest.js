@@ -1,10 +1,10 @@
-import React from 'react'
-import LatestPage from '../components/LatestPage'
+// import React from 'react'
+// import LatestPage from '../components/LatestPage'
 
-const latest = () => {
-  return (
-    <LatestPage/>
-  )
-}
+// const latest = () => {
+//   return (
+//     <LatestPage/>
+//   )
+// }
 
-export default latest
+// export default latest
