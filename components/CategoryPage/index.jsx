@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import Category from "../modules/Category";
-import PageCard from "../modules/__modules__/Card/PageCard";
+// import React, { useState } from "react";
+// import Category from "../modules/Category";
+// import PageCard from "../modules/__modules__/Card/PageCard";
 
-const CategoryPage = () => {
-  const [isTopNav, setIsTopNav] = useState(false);
+// const CategoryPage = () => {
+//   const [isTopNav, setIsTopNav] = useState(false);
 
-  return (
-    <PageCard setIsTopNav={setIsTopNav}>
-      <Category isTopNav={isTopNav} />
-    </PageCard>
-  );
-};
+//   return (
+//     <PageCard setIsTopNav={setIsTopNav}>
+//       <Category isTopNav={isTopNav} />
+//     </PageCard>
+//   );
+// };
 
-export default CategoryPage;
+// export default CategoryPage;

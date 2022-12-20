@@ -1,3 +1,3 @@
-import useSideScroll from "./useSideScroll";
+// import useSideScroll from "./useSideScroll";
 
-export { useSideScroll };
+// export { useSideScroll };
