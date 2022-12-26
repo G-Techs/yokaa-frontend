@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { PauseIcon, PlayCircleIcon } from "../../__modules/Vectors";
 
@@ -6,14 +7,17 @@ const TopSongCard = (props: any) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPlayingIndex, setIsPlayingIndex] = useState(-1);
 
-  interface SongoData{
-    id:number, title:string, img:"string", artist:string
+  interface SongoData {
+    id: number;
+    title: string;
+    img: "string";
+    artist: string;
   }
 
   return (
     <div className="py-4">
       <div className="flex flex-wrap -ml-4 -mr-4">
-        {props.data.map((song : SongoData) => {
+        {props.data.map((song: SongoData) => {
           const { id, title, img, artist } = song as SongoData;
           return (
             <div
