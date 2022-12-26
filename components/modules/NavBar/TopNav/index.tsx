@@ -4,7 +4,6 @@ import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
 import NotificationModal from "./__modules/NotificationModal";
 import ProfileMenuModal from "./__modules/ProfileMenuModal";
-import PropTypes from "prop-types";
 import Link from "next/link";
 import { ChevronRightIcon, LoginIcon, MenuOutlineIcon, MicrophoneIcon, NotificationIcon, SeachIcon } from "../../__modules/Vectors";
 

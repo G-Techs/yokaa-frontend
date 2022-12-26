@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   HomeSubMenuIcon,
   HeadPhonesIcon,
@@ -9,9 +9,13 @@ import {
   FavoriteIcon,
   AdminIcon,
 } from "../../../__modules/Vectors";
-import PropTypes from "prop-types";
 
-const NavContentIcons = ({ isMouseOverLeftNav }) => {
+
+interface NavContentIconsProps {
+  isMouseOverLeftNav: boolean,
+};
+
+const NavContentIcons: FC<NavContentIconsProps>= ({ isMouseOverLeftNav }) => {
   return (
     <div
       className={`flex flex-col justify-center items-center mobile:hidden ${
@@ -28,10 +32,6 @@ const NavContentIcons = ({ isMouseOverLeftNav }) => {
       <AdminIcon className="my-3 text-2xl" />
     </div>
   );
-};
-
-NavContentIcons.propTypes = {
-  isMouseOverLeftNav: PropTypes.bool.isRequired,
 };
 
 export default NavContentIcons;
