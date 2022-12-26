@@ -1,9 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import { AdminIcon, ChevronRightIcon } from "../../../__modules/Vectors";
 import AdminSubmenu from "./AdminSubmenu";
 import PropTypes from "prop-types";
 
-const AdminMenu = ({ isAdminSubmenu, toggleSubmenu }) => {
+interface AdminMenuProps {
+  isAdminSubmenu:  boolean,
+  toggleSubmenu: Function,
+};
+
+const AdminMenu:FC<AdminMenuProps> = ({ isAdminSubmenu, toggleSubmenu }) => {
   return (
     <div className="py-5">
       <div
@@ -30,11 +35,6 @@ const AdminMenu = ({ isAdminSubmenu, toggleSubmenu }) => {
       </div>
     </div>
   );
-};
-
-AdminMenu.propTypes = {
-  isAdminSubmenu: PropTypes.bool.isRequired,
-  toggleSubmenu: PropTypes.func.isRequired,
 };
 
 export default AdminMenu;

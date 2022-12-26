@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, useState } from "react";
 import {
   LoopIcon,
   PlayListIcon,
@@ -8,9 +8,10 @@ import {
 } from "../modules/__modules/Vectors";
 import { VNext, VPlay, VPrev } from "../modules/__modules__/_Vectors";
 import Slider from "@mui/material/Slider";
-import PropTypes from "prop-types";
 
-const BottomPlayer = ({ isFixed = true }) => {
+
+const BottomPlayer= () => {
+  const isFixed=true;
   return (
     <div
       className={`z-20 w-full ${
@@ -92,10 +93,6 @@ const BottomPlayer = ({ isFixed = true }) => {
       </div>
     </div>
   );
-};
-
-BottomPlayer.propTypes = {
-  isFixed: PropTypes.bool,
 };
 
 export default BottomPlayer;

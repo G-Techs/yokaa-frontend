@@ -1,11 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import { useRecoilValue } from "recoil";
-import PropTypes from "prop-types";
 import BottomPlayer from "../../../BottomPaler/BottomPalyer";
 import { leftNavPinedAtom } from "../../../lib/atoms";
 import { LeftNav, TopNav } from "../../NavBar";
 
-const PageCard = ({setIsTopNav,children}) => {
+
+interface PageCardProps {
+  children: JSX.Element ,
+  setIsTopNav: Function,
+};
+
+const PageCard: FC<PageCardProps>= ({setIsTopNav,children})=> {
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
   return (
     <>
@@ -16,14 +21,9 @@ const PageCard = ({setIsTopNav,children}) => {
         {children}
       </div>
       <LeftNav />
-      <BottomPlayer />
+      <BottomPlayer/>
     </>
   );
-};
-
-PageCard.propTypes = {
-  children: PropTypes.element.isRequired,
-  setIsTopNav: PropTypes.func,
 };
 
 export default PageCard;

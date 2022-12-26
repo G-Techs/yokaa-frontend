@@ -1,9 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import { ChevronRightIcon, HomeIcon } from "../../../__modules/Vectors";
 import DashboardMenu from "./DashboardMenu";
-import PropTypes from "prop-types";
+interface DashBoardProps{
+  isDashboardSubmenu:boolean,
+  toggleSubmenu:Function,
+}
 
-const DashBord = ({ isDashboardSubmenu, toggleSubmenu }) => {
+
+const DashBord :FC<DashBoardProps>= ({ isDashboardSubmenu, toggleSubmenu }) => {
   return (
     <div>
       <div
@@ -30,11 +34,6 @@ const DashBord = ({ isDashboardSubmenu, toggleSubmenu }) => {
       </div>
     </div>
   );
-};
-
-DashBord.propTypes = {
-  isDashboardSubmenu: PropTypes.bool.isRequired,
-  toggleSubmenu: PropTypes.func.isRequired,
 };
 
 export default DashBord;

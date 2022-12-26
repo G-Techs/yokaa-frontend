@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 
 import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
@@ -8,7 +8,11 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { ChevronRightIcon, LoginIcon, MenuOutlineIcon, MicrophoneIcon, NotificationIcon, SeachIcon } from "../../__modules/Vectors";
 
-const TopNav = ({ setIsTopNav }) => {
+interface TopNavPropsProps  {
+  setIsTopNav: Function
+};
+
+const TopNav : FC<TopNavPropsProps>= ({ setIsTopNav }) => {
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
   const [isNotificationModal, setIsNotificationModal] = useState(false);
@@ -130,8 +134,6 @@ const TopNav = ({ setIsTopNav }) => {
   );
 };
 
-TopNav.propstype = {
-  setIsTopNav: PropTypes.func,
-};
+
 
 export default TopNav;
