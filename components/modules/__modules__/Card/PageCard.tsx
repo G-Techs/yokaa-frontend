@@ -1,3 +1,4 @@
+
 import React, { Dispatch, FC, SetStateAction } from "react";
 import { useRecoilValue } from "recoil";
 import { leftNavPinedAtom } from "../../../lib/atoms";
@@ -10,6 +11,7 @@ interface IProps {
 }
 
 const PageCard: FC<IProps> = ({ children, setIsTopNav }) => {
+
   const isLeftNavPined = useRecoilValue(leftNavPinedAtom);
   return (
     <>
@@ -17,6 +19,7 @@ const PageCard: FC<IProps> = ({ children, setIsTopNav }) => {
         className={`relative flex flex-col ${
           !isLeftNavPined ? "ml-28 transition-all" : "transition-all ml-72"
         } mobile:ml-5`}
+
       >
         <TopNav setIsTopNav={setIsTopNav} />
         {children}

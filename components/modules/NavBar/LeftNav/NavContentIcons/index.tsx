@@ -9,7 +9,6 @@ import {
   FavoriteIcon,
   AdminIcon,
 } from "../../../__modules/Vectors";
-
 interface IProps {
   isMouseOverLeftNav: boolean;
 }

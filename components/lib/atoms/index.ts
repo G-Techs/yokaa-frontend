@@ -12,7 +12,9 @@ const leftNavPinedAtom = atom<boolean>({
   default: false,
 });
 
+
 const displaySettingsModalAtom = atom<boolean>({
+
   key: "displaysettingsModalAtom",
   default: false,
 });

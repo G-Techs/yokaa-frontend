@@ -20,8 +20,8 @@ const LeftNav = () => {
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
-
   const toggleSubmenu = (menuName: string) => {
+
     menuName === "dashboard"
       ? setIsSubMenu({
           isAdminSubmenu: false,
