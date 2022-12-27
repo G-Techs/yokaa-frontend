@@ -7,7 +7,7 @@ import AudioPlayer from "../utils/config/audioPlayer";
 import equalizer from "../static/images/equalizer.gif";
 
 interface TrackItems{
-  [index: number]:{title: string;
+  [index: number]:{title: string;}
   artist: string;
   audioSrc: string;
   image: string;}
