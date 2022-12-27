@@ -1,17 +1,27 @@
-import React, { FC, useState } from "react";
+
+/* eslint-disable @next/next/no-img-element */
+import React, { Dispatch, SetStateAction, useState, FC } from "react";
+import {
+  LoginIcon,
+  MenuOutlineIcon,
+  MicrophoneIcon,
+  NotificationIcon,
+  SeachIcon,
+  ChevronRightIcon,
+} from "../../__modules/Vectors";
 
 import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
 import NotificationModal from "./__modules/NotificationModal";
 import ProfileMenuModal from "./__modules/ProfileMenuModal";
 import Link from "next/link";
-import { ChevronRightIcon, LoginIcon, MenuOutlineIcon, MicrophoneIcon, NotificationIcon, SeachIcon } from "../../__modules/Vectors";
 
-interface TopNavPropsProps  {
-  setIsTopNav: Function
-};
+interface IProps {
+  setIsTopNav: Dispatch<SetStateAction<boolean>>;
+}
 
-const TopNav : FC<TopNavPropsProps>= ({ setIsTopNav }) => {
+const TopNav: FC<IProps> = ({ setIsTopNav }) => {
+
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
   const [isNotificationModal, setIsNotificationModal] = useState(false);
@@ -132,7 +142,4 @@ const TopNav : FC<TopNavPropsProps>= ({ setIsTopNav }) => {
     </>
   );
 };
-
-
-
 export default TopNav;

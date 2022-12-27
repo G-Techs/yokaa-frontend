@@ -2,17 +2,19 @@ import { atom } from "recoil";
 
 // ----------- atom with one value here ------------------------
 
-const openMenuAtom = atom({
+const openMenuAtom = atom<boolean>({
   key: "openMenuAtom",
   default: false,
 });
 
-const leftNavPinedAtom = atom({
+const leftNavPinedAtom = atom<boolean>({
   key: "leftNavPinedAtom",
   default: false,
 });
 
-const displaySettingsModalAtom = atom({
+
+const displaySettingsModalAtom = atom<boolean>({
+
   key: "displaysettingsModalAtom",
   default: false,
 });

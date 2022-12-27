@@ -1,13 +1,12 @@
 import React, { FC } from "react";
 import { ChevronRightIcon, HomeIcon } from "../../../__modules/Vectors";
 import DashboardMenu from "./DashboardMenu";
-interface DashBoardProps{
-  isDashboardSubmenu:boolean,
-  toggleSubmenu:Function,
+interface IProps {
+  isDashboardSubmenu: boolean;
+  toggleSubmenu: (menuType: string) => void;
 }
+const DashBord: FC<IProps> = ({ isDashboardSubmenu, toggleSubmenu }) => {
 
-
-const DashBord :FC<DashBoardProps>= ({ isDashboardSubmenu, toggleSubmenu }) => {
   return (
     <div>
       <div

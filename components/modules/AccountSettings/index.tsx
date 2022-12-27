@@ -1,10 +1,9 @@
 import React, { FC } from "react";
-
-interface AccountSettingsProps{
-  isTopNav:boolean
+interface IProps {
+  isTopNav: boolean;
 }
 
-const AccountSettings: FC<AccountSettingsProps> = ({ isTopNav }) => {
+const AccountSettings: FC<IProps> = ({ isTopNav }) => {
   return (
     <div
       className={`mt-24 h-full flex justify-center mobile:flex-col mobile:mr-5 mobile:pb-40 transition-all ${

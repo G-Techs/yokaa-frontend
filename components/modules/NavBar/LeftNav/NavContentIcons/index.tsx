@@ -9,13 +9,11 @@ import {
   FavoriteIcon,
   AdminIcon,
 } from "../../../__modules/Vectors";
+interface IProps {
+  isMouseOverLeftNav: boolean;
+}
 
-
-interface NavContentIconsProps {
-  isMouseOverLeftNav: boolean,
-};
-
-const NavContentIcons: FC<NavContentIconsProps>= ({ isMouseOverLeftNav }) => {
+const NavContentIcons: FC<IProps> = ({ isMouseOverLeftNav }) => {
   return (
     <div
       className={`flex flex-col justify-center items-center mobile:hidden ${

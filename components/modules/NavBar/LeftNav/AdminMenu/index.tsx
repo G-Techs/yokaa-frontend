@@ -1,14 +1,13 @@
 import React, { FC } from "react";
 import { AdminIcon, ChevronRightIcon } from "../../../__modules/Vectors";
 import AdminSubmenu from "./AdminSubmenu";
-import PropTypes from "prop-types";
+interface IProps {
+  isAdminSubmenu: boolean;
+  toggleSubmenu: (menuType: string) => void;
+}
 
-interface AdminMenuProps {
-  isAdminSubmenu:  boolean,
-  toggleSubmenu: Function,
-};
+const AdminMenu: FC<IProps> = ({ isAdminSubmenu, toggleSubmenu }) => {
 
-const AdminMenu:FC<AdminMenuProps> = ({ isAdminSubmenu, toggleSubmenu }) => {
   return (
     <div className="py-5">
       <div

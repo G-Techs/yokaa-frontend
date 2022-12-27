@@ -1,4 +1,5 @@
-import React, { FC, useState } from "react";
+/* eslint-disable @next/next/no-img-element */
+import React, { FC } from "react";
 import {
   LoopIcon,
   PlayListIcon,
@@ -8,10 +9,11 @@ import {
 } from "../modules/__modules/Vectors";
 import { VNext, VPlay, VPrev } from "../modules/__modules__/_Vectors";
 import Slider from "@mui/material/Slider";
+interface IProps {
+  isFixed?: boolean;
+}
 
-
-const BottomPlayer= () => {
-  const isFixed=true;
+const BottomPlayer: FC<IProps> = ({ isFixed = true }) => {
   return (
     <div
       className={`z-20 w-full ${
