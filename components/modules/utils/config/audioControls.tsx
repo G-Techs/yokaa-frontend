@@ -1,6 +1,14 @@
-import React from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 import { VPrev, VNext, VPlay, VPause } from "../../__modules__/_Vectors"
-const AudioControls = ({
+
+interface AudioControlsProps{
+    isPlaying:boolean;
+    onPlayPauseClick:Function;
+    onPrevClick: Function;
+    onNextClick:Function;
+}
+
+const AudioControls: FC<AudioControlsProps> = ({
     isPlaying,
     onPlayPauseClick,
     onPrevClick,
@@ -11,7 +19,7 @@ const AudioControls = ({
             type="button"
             className="prev"
             aria-label="Previous"
-            onClick={onPrevClick}
+            onClick={(e)=>onPrevClick}
         >
             <VPrev className="w-12 h-12" />
         </button>
@@ -38,7 +46,7 @@ const AudioControls = ({
             type="button"
             className="next"
             aria-label="Next"
-            onClick={onNextClick}
+            onClick={onNextClick()}
         >
             <VNext className="w-12 h-12" />
         </button>
