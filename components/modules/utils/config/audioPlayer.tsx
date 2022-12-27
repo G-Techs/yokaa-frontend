@@ -1,21 +1,22 @@
 import React, { useState, useEffect, useRef, FC } from "react";
 import AudioControls from "./audioControls";
 
-interface AudioPlayerProps{
-    title: string;
-    artist: string;
-    audioSrc: string;
-    image: string;
+type TrackItems={
+  tracks: any;
+  [index: number]:{title: string;
+  artist: string;
+  audioSrc: string;
+  image: string;}
 }
 
-const AudioPlayer= ({tracks} ) => {
+const AudioPlayer= ({tracks}:TrackItems) => {
   // State
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   // Destructure for conciseness
-  const { title, artist, image, audioSrc } = tracks[trackIndex] as AudioPlayerProps;
+  const { title, artist, image, audioSrc } = tracks[trackIndex];
 
   // Refs
   const audioRef = useRef<HTMLAudioElement| null>(null);

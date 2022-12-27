@@ -6,7 +6,17 @@ import liveBg from "../../../public/livebg.jpg";
 import AudioPlayer from "../utils/config/audioPlayer";
 import equalizer from "../static/images/equalizer.gif";
 
+interface TrackItems{
+  [index: number]:{title: string;
+  artist: string;
+  audioSrc: string;
+  image: string;}
+}
+
+
 const NewReleases = () => {
+  let songsData:TrackItems=songs;  
+  const [tracksList, setTracksList] = useState(songsData)
   const [isPlaying, setIsPlaying] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   return (
@@ -32,7 +42,7 @@ const NewReleases = () => {
             </div>
             <div className="lg:block hidden">
               <div className="mx-2 py-1 ">
-                <AudioPlayer tracks ={songs} />
+                <AudioPlayer tracks ={tracksList} />
               </div>
             </div>
           </div>

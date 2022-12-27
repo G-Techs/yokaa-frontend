@@ -46,7 +46,7 @@ const AudioControls: FC<AudioControlsProps> = ({
             type="button"
             className="next"
             aria-label="Next"
-            onClick={onNextClick()}
+            onClick={()=>onNextClick()}
         >
             <VNext className="w-12 h-12" />
         </button>

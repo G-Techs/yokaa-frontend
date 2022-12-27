@@ -36,6 +36,5 @@ export const songs = [
         artist: 'Albatros Country',
         audioSrc: URL,
         image: 'https://api.lorem.space/image/album?hash=3154'
-    },
-
+    }
 ]
