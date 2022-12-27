@@ -21,6 +21,7 @@ const ProfileMenuModal = () => {
             <ProfileSheetIcon className="text-primary" />
           </div>
           <div className="px-5 flex flex-col w-full">
+
             <div
               className="px-5 flex flex-col w-full"
               onClick={() => router.push("/account/profile")}

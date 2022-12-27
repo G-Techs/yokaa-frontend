@@ -1,3 +1,4 @@
+
 /* eslint-disable @next/next/no-img-element */
 import React, { Dispatch, SetStateAction, useState, FC } from "react";
 import {
@@ -8,6 +9,7 @@ import {
   SeachIcon,
   ChevronRightIcon,
 } from "../../__modules/Vectors";
+
 import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
 import NotificationModal from "./__modules/NotificationModal";
@@ -19,6 +21,7 @@ interface IProps {
 }
 
 const TopNav: FC<IProps> = ({ setIsTopNav }) => {
+
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
   const [isNotificationModal, setIsNotificationModal] = useState(false);
@@ -139,5 +142,4 @@ const TopNav: FC<IProps> = ({ setIsTopNav }) => {
     </>
   );
 };
-
 export default TopNav;

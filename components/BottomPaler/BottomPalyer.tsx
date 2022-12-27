@@ -9,7 +9,6 @@ import {
 } from "../modules/__modules/Vectors";
 import { VNext, VPlay, VPrev } from "../modules/__modules__/_Vectors";
 import Slider from "@mui/material/Slider";
-
 interface IProps {
   isFixed?: boolean;
 }

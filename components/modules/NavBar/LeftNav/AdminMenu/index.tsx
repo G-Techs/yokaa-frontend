@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import { AdminIcon, ChevronRightIcon } from "../../../__modules/Vectors";
 import AdminSubmenu from "./AdminSubmenu";
-
 interface IProps {
   isAdminSubmenu: boolean;
   toggleSubmenu: (menuType: string) => void;
 }
 
 const AdminMenu: FC<IProps> = ({ isAdminSubmenu, toggleSubmenu }) => {
+
   return (
     <div className="py-5">
       <div

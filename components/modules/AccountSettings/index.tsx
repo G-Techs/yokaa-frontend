@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-
 interface IProps {
   isTopNav: boolean;
 }
