@@ -21,8 +21,8 @@
     "**/*.tsx",
     "components/modules/__modules__/_Vectors/wavePlayVector.jsx",
     "components/modules/AddNewSinger/index.tsx",
-    "components/modules/utils/config/audioPlayer.jsx",
-    "components/modules/utils/config/audioControls.jsx"
+    "components/modules/utils/config/audioPlayer.tsx",
+    "components/modules/utils/config/audioControls.tsx"
   ],
   "exclude": ["node_modules"]
 }

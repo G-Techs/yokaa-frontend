@@ -3,40 +3,45 @@ const URL =
 
 export const songs = [
   {
+    id:1,
     title: "DJ Khaled Featuring",
     artist: "Dj Khaled",
     audioSrc: URL,
-
-    image: "https://api.lorem.space/image/album?hash=3173",
+    img: "https://api.lorem.space/image/album?hash=3173",
   },
   {
+    id:2,
     title: "DJ Khaled Featuring",
     artist: "Cigarette after Sex",
     audioSrc: URL,
-    image: "https://api.lorem.space/image/album?hash=3172",
+    img: "https://api.lorem.space/image/album?hash=3172",
   },
   {
+    id:3,
     title: "DJ Khaled Featuring",
     artist: "Edtyta Gomiak",
     audioSrc: URL,
-    image: "https://api.lorem.space/image/album?hash=3175",
+    img: "https://api.lorem.space/image/album?hash=3175",
   },
   {
+    id:4,
     title: "DJ Khaled Featuring",
     artist: "Tintin Mihigo",
     audioSrc: URL,
-    image: "https://api.lorem.space/image/album?hash=3154",
+    img: "https://api.lorem.space/image/album?hash=3154",
   },
   {
+    id:5,
     title: "DJ Khaled Featuring",
     artist: "Samurai Thung",
     audioSrc: URL,
-    image: "https://api.lorem.space/image/album?hash=3154",
+    img: "https://api.lorem.space/image/album?hash=3154",
   },
   {
+    id:6,
     title: "DJ Khaled Featuring",
     artist: "Albatros Country",
     audioSrc: URL,
-    image: "https://api.lorem.space/image/album?hash=3154",
+    img: "https://api.lorem.space/image/album?hash=3154",
   },
 ];
