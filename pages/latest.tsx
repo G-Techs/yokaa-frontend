@@ -1,9 +1,8 @@
 import React from "react";
-// import LatestPage from "../components/LatestPage";
+import LatestPage from "../components/LatestPage";
 
 const latest = () => {
-  // return <LatestPage />;
-  return <></>;
+  return <LatestPage />;
 };
 
 export default latest;

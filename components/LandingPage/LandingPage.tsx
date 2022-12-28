@@ -4,7 +4,7 @@ import HotSongs from "../modules/HotSongs";
 import NewReleases from "../modules/NewReleases";
 
 import PageCard from "../modules/__modules__/Card/PageCard";
-// import FeaturedAlbum from "../modules/FeaturedAlbum";
+import FeaturedAlbum from "../modules/FeaturedAlbum";
 
 const LandingPage = () => {
   const [isTopNav, setIsTopNav] = React.useState(false);
@@ -14,7 +14,8 @@ const LandingPage = () => {
     <PageCard setIsTopNav={setIsTopNav} >
         <NewReleases />
         <TopSongs />
-        {/* <FeaturedAlbum />*/}
+
+        <FeaturedAlbum />
         <HotSongs />
       </PageCard>  
     </div>
