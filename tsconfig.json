@@ -15,6 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/modules/__modules__/_Vectors/wavePlayVector.tsx", "components/modules/AddNewSinger/index.tsx", "components/modules/AddNewSinger/index.tsx" ,"components/modules/NewReleases/index.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/modules/__modules__/_Vectors/wavePlayVector.jsx",
+    "components/modules/AddNewSinger/index.tsx",
+    "components/modules/utils/config/audioPlayer.jsx",
+    "components/modules/utils/config/audioControls.jsx"
+  ],
   "exclude": ["node_modules"]
 }
