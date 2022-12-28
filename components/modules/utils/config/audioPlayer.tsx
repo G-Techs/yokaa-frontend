@@ -7,6 +7,7 @@ interface NewReleasesSongsProps {
 }
 
 const AudioPlayer:FC<NewReleasesSongsProps> = ({ tracks }) => {
+  
    // State
    const [trackIndex, setTrackIndex] = useState(0);
    const [trackProgress, setTrackProgress] = useState(0);
