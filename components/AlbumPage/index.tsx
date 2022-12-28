@@ -32,6 +32,7 @@ const AlbumPage = () => {
               <img
                 src={topSongsData[2].img}
                 className="w-12 h-12 object-cover m-10 rounded-xl"
+                alt={topSongsData[2].artist}
               />
               <div>
                 <p className="font-bold">{topSongsData[2].artist}</p>
@@ -42,13 +43,14 @@ const AlbumPage = () => {
               <img
                 src={equalizer.src}
                 className="w-[20rem] h-[20rem] object-cover"
+                alt="equalizer"
               />
             </div>
             <BottomPlayer isFixed={false} />
           </div>
           <div className="w-full flex flex-col md:flex-wrap ml-5 mobile:h-fit">
-            {topSongsData.map((song) => {
-              return <SongCard song={song} />;
+            {topSongsData.map((song, index) => {
+              return <SongCard key={index} song={song} />;
             })}
           </div>
         </div>

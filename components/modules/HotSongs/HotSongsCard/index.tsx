@@ -13,8 +13,8 @@ const HotSongsCard: FC<HotSongsCardProps> = ({ data }) => {
       className="w-1/2 bg-white  px-5 py-5 rounded-xl shadow-xl  mobile:w-full mobile:mx-0"
       title="Hot Songs"
     >
-      {data.map((song) => {
-        return <SongCard song={song} />;
+      {data.map((song, index) => {
+        return <SongCard key={index} song={song} />;
       })}
     </Carousel>
   );
