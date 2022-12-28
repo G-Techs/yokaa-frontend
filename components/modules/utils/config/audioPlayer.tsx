@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, FC } from "react";
 import { ISong } from "../../../../types";
 import AudioControls from "./audioControls";
-
 interface NewReleasesSongsProps {
   tracks: ISong[];
 }
@@ -77,6 +76,7 @@ const AudioPlayer:FC<NewReleasesSongsProps> = ({ tracks }) => {
        audioRef.current?.pause();
      };
    }, []);
+
   return (
     <div className="mx-2">
       <div className="flex justify-between mx-4 items-center">
@@ -89,7 +89,6 @@ const AudioPlayer:FC<NewReleasesSongsProps> = ({ tracks }) => {
             <p className="text-gray-300">{artist}</p>
           </div>
         </div>
-
         <div className="w-32">
           <AudioControls
             isPlaying={isPlaying}

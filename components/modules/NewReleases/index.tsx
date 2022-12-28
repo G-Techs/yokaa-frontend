@@ -7,7 +7,6 @@ import liveBg from "../static/images/livebg.jpg";
 import equalizer from "../static/images/equalizer.gif";
 import { ISong } from "../../../types";
 
-
 const newRealeaseBg = {
   backgroundImage: `url(${liveBg.src})`,
   backgroundPosition: "center",
@@ -45,7 +44,6 @@ const NewReleases = () => {
   }
   return (
     <div
-      // style={newRealeaseBg}
       className="mt-20 mr-5 bg-white shadow-lg rounded-bl-[50px]"
     >
       <p className="text-2xl  py-5 px-5 bg-white text-gray-700 font-bold">

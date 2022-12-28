@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { VPrev, VNext, VPlay, VPause } from "../../__modules__/_Vectors"
-
 interface AudioControlsProps{
     isPlaying:boolean;
     onPlayPauseClick:Function;
@@ -19,8 +18,7 @@ const AudioControls: FC<AudioControlsProps> = ({
             type="button"
             className="prev"
             aria-label="Previous"
-            onClick={()=>onPrevClick}
-        >
+            onClick={()=>onPrevClick}>
             <VPrev className="w-12 h-12" />
         </button>
         {isPlaying ? (
