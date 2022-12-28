@@ -3,4 +3,7 @@ export interface ISong {
   img: string;
   artist: string;
   title: string;
+  audioSrc?:string
 }
+
+

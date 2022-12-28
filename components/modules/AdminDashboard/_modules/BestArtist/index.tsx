@@ -9,7 +9,7 @@ const BestArtist = () => {
       <h3 className="text-2xl font-semibold pb-5 border-b">Best Artist</h3>
       <div className="flex flex-col gap-3">
         <ArtistCard
-          artistAvatar={songs[0].image}
+          artistAvatar={songs[0].img}
           artistName={songs[0].artist}
           date="24 jan,2022"
           streams={numberConverter(400)}
@@ -17,7 +17,7 @@ const BestArtist = () => {
           streamsBgClassName="bg-green-500"
         />
         <ArtistCard
-          artistAvatar={songs[1].image}
+          artistAvatar={songs[1].img}
           artistName={songs[1].artist}
           date="12 feb,2022"
           streams={numberConverter(500)}
@@ -25,7 +25,7 @@ const BestArtist = () => {
           streamsBgClassName="bg-primary"
         />
         <ArtistCard
-          artistAvatar={songs[2].image}
+          artistAvatar={songs[2].img}
           artistName={songs[2].artist}
           date="24 jul,2022"
           streams={numberConverter(350)}
