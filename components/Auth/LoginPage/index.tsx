@@ -35,7 +35,7 @@ const LoginPage = () => {
           </form>
         </div>
         <div className="flex justify-start w-[-webkit-fill-available] py-2">
-          You don't have an account ?
+          You don&apos;t have an account ?
           <span
             className="text-primary text-left px-2 cursor-pointer"
             onClick={() => router.push("/signup")}

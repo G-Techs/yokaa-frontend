@@ -20,8 +20,8 @@ const ResetPassword = () => {
               Reset password
             </p>
             <p className="mt-6 md:text-xl text-md text-gray-100">
-              Enter your email address and we'll send you an email with
-              instructions to reset your password{" "}
+              Enter your email address and we&apos;ll send you an email with
+              instructions to reset your password
             </p>
             <form className="flex flex-col mt-3">
               <label className="text-gray-300 font-bold my-2">Password</label>
