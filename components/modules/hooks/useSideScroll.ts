@@ -8,12 +8,10 @@ const useSideScroll = () => {
     let scrollAmount = 0;
 
     const slideTimer = setInterval(() => {
-      if (element?.scrollLeft) {
-        element.scrollLeft += step;
-        scrollAmount += Math.abs(step);
-        if (scrollAmount >= distance) {
-          clearInterval(slideTimer);
-        }
+      element!.scrollLeft += step as number;
+      scrollAmount += Math.abs(step as number);
+      if (scrollAmount >= distance) {
+        clearInterval(slideTimer);
       }
     }, speed);
   };

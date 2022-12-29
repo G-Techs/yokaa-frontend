@@ -11,12 +11,8 @@ const FeaturedAlbum = () => {
       title="Featured Albums"
       className="mt-8 p-4 rounded-lg shadow-lg mr-4 bg-white"
     >
-      {data.map((song) => {
-        return (
-          <>
-            <FeaturedAlbumCard album={song} />
-          </>
-        );
+      {data.map((song, index) => {
+        return <FeaturedAlbumCard album={song} key={index} />;
       })}
     </Carousel>
   );
