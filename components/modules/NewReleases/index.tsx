@@ -1,100 +1,80 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { songs } from "../utils/dummy";
-import { VDots, VPause, VPlay, VStar, VWave } from "../__modules__/_Vectors";
+import { VDots, VStar } from "../__modules__/_Vectors";
 import AudioPlayer from "../utils/config/audioPlayer";
 import liveBg from "../static/images/livebg.jpg";
-import equalizer from "../static/images/equalizer.gif";
+// import equalizer from "../static/images/equalizer.gif";
+import Equalizer from "./Equalizer";
 import { ISong } from "../../../types";
-
-const newRealeaseBg = {
-  backgroundImage: `url(${liveBg.src})`,
-  backgroundPosition: "center",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  borderRadius: "20px",
-};
+import PlayerController from "./PlayerController";
 
 const NewReleases = () => {
   const [isPlaying, setIsPlaying] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   const [tracks, setTracks] = useState<ISong[]>(songs);
 
-  function playerControler(index:number){
-    return(
-      <div
-      onClick={() => {
-        if (isPlaying === index && !isPaused) {
-          setIsPaused(true);
-          setIsPlaying(index);
-        } else {
-          setIsPaused(false);
-        }
-        setIsPlaying(index);
-      }}
-      className="px-4"
-    >
-      {isPlaying === index && !isPaused ? (
-        <VPause className="w-6 h-6" />
-      ) : (
-        <VPlay className="w-6 h-6" />
-      )}
-    </div>
-    )
-  }
   return (
-    <div
-      className="mt-20 mr-5 bg-white shadow-lg rounded-bl-[50px]"
-    >
-      <p className="text-2xl  py-5 px-5 bg-white text-gray-700 font-bold">
+    <div className="mt-20 mr-5 bg-white shadow-lg rounded-bl-[3.125rem]">
+      <p className="text-2xl py-5 px-5 bg-white text-gray-700 font-bold">
         New Release
       </p>
-      <div className="w-full relative overflow-hidden h-[32rem] rounded-bl-[50px] shadow-xl text-white">
+      <div className="w-full relative overflow-hidden h-[30rem] rounded-bl-[3.125rem] shadow-xl text-white">
         <img
           src={liveBg.src}
           alt="live background"
-          className="absolute h-full w-full object-cover rounded-tr-[50px] rounded-bl-[50px]"
+          className="absolute h-full w-full object-cover rounded-tr-[3.125rem] rounded-bl-[3.125rem]"
         />
-        <div className="grid lg:grid-cols-2 grid-cols-1 h-full absolute w-full">
-          <div className="flex h-[8rem] flex-col justify-between lg:h-full ">
+        <div className="grid lg:grid-cols-2 grid-cols-1 h-full absolute w-full rounded-tr-[3.125rem] bg-gradient-to-l from-black/90 via-black/80 to-black/20">
+          <div className="flex h-[8rem] pb-5 flex-col justify-between lg:h-full ">
             <div className="lg:w-[10rem] w-full flex justify-center mx-auto my-auto">
-              <img
-                src={equalizer.src}
-                className="w-[20rem] h-[20rem] object-cover"
-              />
+              <Equalizer />
             </div>
             <div className="lg:block hidden">
-              <div className="mx-2 py-1 ">
-                <AudioPlayer tracks={songs} />
+              <div className="mx-2 py-1 mr-20">
+                <AudioPlayer
+                  tracks={songs}
+                  isMinified={true}
+                  className="w-10 h-10"
+                />
               </div>
             </div>
           </div>
-          <div className="w-full p-5 overflow-y-scroll no-scrollbar lg:mt-0 mt-6">
+          <div className="m-5 overflow-y-hidden lg:mt-0 mt-6">
             {songs.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className={` ${
-                    isPlaying === index ? "bg-black bg-opacity-10" : ""
-                  } flex hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md`}
+                  onClick={() => setIsPlaying(index)}
+                  className={`flex cursor-pointer hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md ${
+                    isPlaying === index ? "bg-black/40 backdrop-blur-md" : ""
+                  }`}
                 >
-                  <div className="lg:w-20 lg:h-20 max-h-20 w-12 h-12 rounded-br-2xl rounded-tl-2xl overflow-hidden">
-                    <img
-                      src={item.img}
-                      className="object-cover"
-                      alt={item.title}
-                    />
-                  </div>
-                  <div className="flex flex-col ">
-                    <p className="lg:text-xl font-medium"> {item.title}</p>
-                    <p className="text-sm"> {item.artist}</p>
+                  <div className="flex items-center space-x-4">
+                    <div className="lg:w-[3.75rem] lg:h-[3.75rem] max-h-20 w-12 h-12 rounded-br-2xl rounded-tl-2xl overflow-hidden">
+                      <img
+                        src={item.img}
+                        className="object-cover"
+                        alt={item.title}
+                      />
+                    </div>
+                    <div className="flex flex-col space-y-2">
+                      <p className="lg:text-base font-semibold">{item.title}</p>
+                      <p className="text-sm">{item.artist}</p>
+                    </div>
                   </div>
                   <div>
                     <VStar className="w-6 h-6 lg:block hidden" />
                   </div>
-                {playerControler(index)}
+                  <PlayerController
+                    index={index}
+                    isPaused={isPaused}
+                    isPlaying={isPlaying}
+                    setIsPaused={setIsPaused}
+                    setIsPlaying={setIsPlaying}
+                  />
                   <div>
-                    <VDots className="w-6 h-6 lg:block hidden text-[#d97706]" />
+                    <VDots className="w-6 h-6 lg:block hidden text-primary" />
                   </div>
                 </div>
               );
