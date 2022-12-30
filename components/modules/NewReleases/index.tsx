@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { songs } from "../utils/dummy";
 import { VDots, VStar } from "../__modules__/_Vectors";
 import AudioPlayer from "../utils/config/audioPlayer";
@@ -8,11 +8,15 @@ import liveBg from "../static/images/livebg.jpg";
 import Equalizer from "./Equalizer";
 import { ISong } from "../../../types";
 import PlayerController from "./PlayerController";
+import { type } from "os";
 
 const NewReleases = () => {
   const [isPlaying, setIsPlaying] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   const [tracks, setTracks] = useState<ISong[]>(songs);
+
+  const offsetH= useRef<HTMLDivElement>(null);
+  const clientH= useRef<HTMLDivElement>(null);
 
   return (
     <div className="mt-20 mr-5 bg-white shadow-lg rounded-bl-[3.125rem]">
@@ -40,12 +44,20 @@ const NewReleases = () => {
               </div>
             </div>
           </div>
-          <div className="m-5 overflow-y-hidden lg:mt-0 mt-6">
+          <div ref={offsetH}  className="m-5 overflow-y-scroll scroll-smooth no-scrollbar lg:mt-0 mt-6">
             {songs.map((item, index) => {
               return (
-                <div
+              <div
                   key={index}
-                  onClick={() => setIsPlaying(index)}
+                  ref={clientH}
+                  // this behavior scroll the selected element to the top of the parent div
+                  onClick={() => {
+                    if(offsetH.current){
+                      offsetH.current.scrollTop = 90 *index
+                    }
+                    setIsPlaying(index)}
+                  
+                }
                   className={`flex cursor-pointer hover:bg-opacity-50 hover:placeholder:bg-black my-4 p-2 items-center justify-between rounded-md ${
                     isPlaying === index ? "bg-black/40 backdrop-blur-md" : ""
                   }`}
