@@ -50,7 +50,7 @@ const NewReleases = () => {
               <div
                   key={index}
                   ref={clientH}
-                  // this behavior scroll the selected element to the top of the parent div.
+                  // this behavior scroll the selected element to the top of the parent div
                   onClick={() => {
                     if(offsetH.current){
                       offsetH.current.scrollTop = 90 *index
