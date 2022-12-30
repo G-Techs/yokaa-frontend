@@ -23,9 +23,7 @@ const Carousel: FC<CarouselProps> = ({
       scrollContainer.current,
       40,
       200,
-      scrollContainer.current?.offsetWidth
-        ? -scrollContainer.current?.offsetWidth
-        : 0
+      -(scrollContainer.current?.offsetWidth as number)
     );
   };
 
@@ -34,7 +32,7 @@ const Carousel: FC<CarouselProps> = ({
       scrollContainer.current,
       40,
       200,
-      scrollContainer.current?.offsetWidth
+      scrollContainer.current?.offsetWidth as number
     );
   };
   return (
