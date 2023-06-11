@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, FC } from "react";
-import { VPause, VPlay } from "../__modules__/_Vectors";
+import { VPause, VPlay } from "../Vectors";
 
 interface PlayerControlerProps {
   index: number;
@@ -9,13 +9,7 @@ interface PlayerControlerProps {
   setIsPlaying: Dispatch<SetStateAction<number>>;
 }
 
-const PlayerController: FC<PlayerControlerProps> = ({
-  index,
-  isPaused,
-  isPlaying,
-  setIsPaused,
-  setIsPlaying,
-}) => {
+const PlayerController: FC<PlayerControlerProps> = ({ index, isPaused, isPlaying, setIsPaused, setIsPlaying }) => {
   return (
     <div
       onClick={() => {
@@ -29,11 +23,7 @@ const PlayerController: FC<PlayerControlerProps> = ({
       }}
       className="px-4"
     >
-      {isPlaying === index && !isPaused ? (
-        <VPause className="w-6 h-6" />
-      ) : (
-        <VPlay className="w-6 h-6" />
-      )}
+      {isPlaying === index && !isPaused ? <VPause className="w-6 h-6" /> : <VPlay className="w-6 h-6" />}
     </div>
   );
 };

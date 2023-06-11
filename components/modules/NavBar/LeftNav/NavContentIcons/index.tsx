@@ -1,25 +1,12 @@
 import React, { FC } from "react";
-import {
-  HomeSubMenuIcon,
-  HeadPhonesIcon,
-  FileMusicIcon,
-  ArrowExpendUpRighIcon,
-  DownLoadOutlineIcon,
-  FilePlusIcon,
-  FavoriteIcon,
-  AdminIcon,
-} from "../../../__modules/Vectors";
+import { HomeSubMenuIcon, HeadPhonesIcon, FileMusicIcon, ArrowExpendUpRighIcon, DownLoadOutlineIcon, FilePlusIcon, FavoriteIcon, AdminIcon } from "../../../Vectors";
 interface IProps {
   isMouseOverLeftNav: boolean;
 }
 
 const NavContentIcons: FC<IProps> = ({ isMouseOverLeftNav }) => {
   return (
-    <div
-      className={`flex flex-col justify-center items-center mobile:hidden ${
-        isMouseOverLeftNav && "hidden"
-      }`}
-    >
+    <div className={`flex flex-col justify-center items-center mobile:hidden ${isMouseOverLeftNav && "hidden"}`}>
       <HomeSubMenuIcon className="my-3 text-2xl text-primary" />
       <HeadPhonesIcon className="my-3 text-2xl" />
       <FileMusicIcon className="my-3 text-2xl" />

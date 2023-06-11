@@ -1,10 +1,5 @@
 const useSideScroll = () => {
-  const sideScroll = (
-    element: HTMLDivElement | null,
-    speed: number,
-    distance: number,
-    step = 10
-  ) => {
+  const sideScroll = (element: HTMLDivElement | null, speed: number, distance: number, step = 10) => {
     let scrollAmount = 0;
 
     const slideTimer = setInterval(() => {

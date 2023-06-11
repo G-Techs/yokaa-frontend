@@ -7,11 +7,7 @@ interface NewReleasesSongsProps {
   className?: string;
 }
 
-const AudioPlayer: FC<NewReleasesSongsProps> = ({
-  tracks,
-  isMinified = false,
-  className,
-}) => {
+const AudioPlayer: FC<NewReleasesSongsProps> = ({ tracks, isMinified = false, className }) => {
   // State
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
@@ -29,6 +25,8 @@ const AudioPlayer: FC<NewReleasesSongsProps> = ({
     audioRef.current = new Audio(audioSrc);
     const { duration } = audioRef.current;
     setDuration(duration);
+    // TODO: This lint should be recked again
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const startTimer = () => {};
@@ -73,6 +71,8 @@ const AudioPlayer: FC<NewReleasesSongsProps> = ({
       // Set the isReady ref as true for the next pass
       isReady.current = true;
     }
+    // TODO: This lint should be recked again
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trackIndex]);
 
   useEffect(() => {
@@ -86,13 +86,7 @@ const AudioPlayer: FC<NewReleasesSongsProps> = ({
     <div className="mx-2">
       <div className="flex justify-between mx-4 items-center">
         <div className="flex items-center w-full">
-          <div
-            className={`${
-              isMinified
-                ? className
-                : "w-24 max-w-24 max-h-24 rounded-lg overflow-hidden h-16"
-            }`}
-          >
+          <div className={`${isMinified ? className : "w-24 max-w-24 max-h-24 rounded-lg overflow-hidden h-16"}`}>
             <img src={img} className="object-fit rounded-lg" alt={title} />
           </div>
           <div className="ml-6 font-semibold ">
@@ -101,12 +95,7 @@ const AudioPlayer: FC<NewReleasesSongsProps> = ({
           </div>
         </div>
         <div className="w-32">
-          <AudioControls
-            isPlaying={isPlaying}
-            onPrevClick={toPrevTrack}
-            onNextClick={toNextTrack}
-            onPlayPauseClick={setIsPlaying}
-          />
+          <AudioControls isPlaying={isPlaying} onPrevClick={toPrevTrack} onNextClick={toNextTrack} onPlayPauseClick={setIsPlaying} />
         </div>
       </div>
     </div>

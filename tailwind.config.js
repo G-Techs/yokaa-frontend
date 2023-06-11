@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -18,16 +15,11 @@ module.exports = {
       },
 
       animation: {
-        equalizerBarOne:
-          "equalizerBarOne 0.4s infinite alternate both 0.2s ease",
-        equalizerBarTwo:
-          "equalizerBarTwo 0.4s infinite alternate both 0.4s ease",
-        equalizerBarThree:
-          "equalizerBarThree 0.4s infinite alternate both 0.6s ease",
-        equalizerBarFour:
-          "equalizerBarFour 0.4s infinite alternate both 0.8s ease",
-        equalizerBarFive:
-          "equalizerBarFive 0.4s infinite alternate both 1s ease",
+        equalizerBarOne: "equalizerBarOne 0.4s infinite alternate both 0.2s ease",
+        equalizerBarTwo: "equalizerBarTwo 0.4s infinite alternate both 0.4s ease",
+        equalizerBarThree: "equalizerBarThree 0.4s infinite alternate both 0.6s ease",
+        equalizerBarFour: "equalizerBarFour 0.4s infinite alternate both 0.8s ease",
+        equalizerBarFive: "equalizerBarFive 0.4s infinite alternate both 1s ease",
       },
 
       keyframes: {

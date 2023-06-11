@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { VPen, VTrash } from "../__modules/Vectors";
+import { VPen, VTrash } from "../Vectors";
 import Link from "next/link";
 import PropTypes from "prop-types";
 
@@ -9,26 +9,17 @@ interface CategoryProps {
 
 const Category: FC<CategoryProps> = ({ isTopNav }) => {
   return (
-    <div
-      className={`my-24 bg-white flex flex-col mr-5 border shadow-lg rounded-lg overflow-x-auto ${
-        isTopNav && "my-40"
-      } transition-all`}
-    >
+    <div className={`my-24 bg-white flex flex-col mr-5 border shadow-lg rounded-lg overflow-x-auto ${isTopNav && "my-40"} transition-all`}>
       <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <h3 className="font-bold text-2xl">Category Lists</h3>
         <Link href="/admin/addcategory">
-          <button className="bg-primary text-white px-4 py-2 rounded-md mobilesm:text-xs">
-            Add New Category
-          </button>
+          <button className="bg-primary text-white px-4 py-2 rounded-md mobilesm:text-xs">Add New Category</button>
         </Link>
       </div>
       <div className="flex mobilesm:flex-col mobilesm:gap-3 justify-between px-5 py-5">
         <div className="flex items-center">
           <label htmlFor="numberOfItem">Show</label>
-          <select
-            name="numberOfItem"
-            className="px-2 mx-2 rounded-md outline-none border bg-transparent focus:border-primary transition-all"
-          >
+          <select name="numberOfItem" className="px-2 mx-2 rounded-md outline-none border bg-transparent focus:border-primary transition-all">
             <option value={10}>10</option>
             <option value={25}>25</option>
             <option value={50}>50</option>
@@ -40,11 +31,7 @@ const Category: FC<CategoryProps> = ({ isTopNav }) => {
           <label htmlFor="searchItem" className="px-4 mobilesm:px-0">
             Search:
           </label>
-          <input
-            type="search"
-            name="searchItem"
-            className="border border-gray-300 px-2 py-1 rounded-md outline-none focus:border-primary transition-all"
-          />
+          <input type="search" name="searchItem" className="border border-gray-300 px-2 py-1 rounded-md outline-none focus:border-primary transition-all" />
         </div>
       </div>
       <div className="mr-5">
@@ -61,10 +48,7 @@ const Category: FC<CategoryProps> = ({ isTopNav }) => {
                 <tr key={index}>
                   <td className="border px-5 py-5">{index + 1}</td>
                   <td className="border px-5">Rock songs</td>
-                  <td className="border px-5">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Sunt !
-                  </td>
+                  <td className="border px-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt !</td>
                   <td className="border px-5">
                     <div className="flex justify-center items-center">
                       <button className="bg-primary p-2 rounded-lg text-white">

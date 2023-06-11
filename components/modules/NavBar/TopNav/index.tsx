@@ -1,27 +1,17 @@
-
-/* eslint-disable @next/next/no-img-element */
 import React, { Dispatch, SetStateAction, useState, FC } from "react";
-import {
-  LoginIcon,
-  MenuOutlineIcon,
-  MicrophoneIcon,
-  NotificationIcon,
-  SeachIcon,
-  ChevronRightIcon,
-} from "../../__modules/Vectors";
+import { LoginIcon, MenuOutlineIcon, MicrophoneIcon, NotificationIcon, SeachIcon, ChevronRightIcon } from "../../Vectors";
 
 import { openMenuAtom } from "../../../lib/atoms";
 import { useRecoilState } from "recoil";
-import NotificationModal from "./__modules/NotificationModal";
-import ProfileMenuModal from "./__modules/ProfileMenuModal";
+import ProfileMenuModal from "./ProfileMenuModal";
 import Link from "next/link";
+import NotificationModal from "./NotificationModal";
 
 interface IProps {
   setIsTopNav: Dispatch<SetStateAction<boolean>>;
 }
 
 const TopNav: FC<IProps> = ({ setIsTopNav }) => {
-
   const [isTopMenu, setIsTopMenu] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useRecoilState(openMenuAtom);
   const [isNotificationModal, setIsNotificationModal] = useState(false);
@@ -50,9 +40,7 @@ const TopNav: FC<IProps> = ({ setIsTopNav }) => {
         <div className="mobile:hidden">
           <ul className="inline-flex font-bold">
             <Link href="/">
-              <li className="pr-5 hover:text-primary cursor-pointer text-primary">
-                Home
-              </li>
+              <li className="pr-5 hover:text-primary cursor-pointer text-primary">Home</li>
             </Link>
             <Link href="/latest">
               <li className="px-5 hover:text-primary cursor-pointer">Latest</li>
@@ -61,9 +49,7 @@ const TopNav: FC<IProps> = ({ setIsTopNav }) => {
               <li className="px-5  hover:text-primary cursor-pointer">Album</li>
             </Link>
             <Link href="#">
-              <li className="px-5  hover:text-primary cursor-pointer">
-                Trending
-              </li>
+              <li className="px-5  hover:text-primary cursor-pointer">Trending</li>
             </Link>
           </ul>
         </div>
@@ -72,17 +58,10 @@ const TopNav: FC<IProps> = ({ setIsTopNav }) => {
             <MenuOutlineIcon />
           </button>
         </div>
-        <h1 className="px-3 text-2xl font-bold text-primary hidden mobile:block">
-          Yokaa
-        </h1>
+        <h1 className="px-3 text-2xl font-bold text-primary hidden mobile:block">Yokaa</h1>
         <div className="mobile:flex mobile:flex-col">
-          <button
-            onClick={toggleTopMenu}
-            className="text-primary mobile:block hidden"
-          >
-            <ChevronRightIcon
-              className={`${isTopMenu && "rotate-90"} transition-all`}
-            />
+          <button onClick={toggleTopMenu} className="text-primary mobile:block hidden">
+            <ChevronRightIcon className={`${isTopMenu && "rotate-90"} transition-all`} />
           </button>
           <div
             className={`items-center justify-end ${
@@ -98,45 +77,24 @@ const TopNav: FC<IProps> = ({ setIsTopNav }) => {
               <MicrophoneIcon />
             </div>
             <div className="flex">
-              <button
-                className="px-5 relative"
-                onClick={toggleNoticationNavModals}
-              >
+              <button className="px-5 relative" onClick={toggleNoticationNavModals}>
                 <NotificationIcon />
-                <span className="absolute top-0 bg-primary text-xs text-white px-1 rounded-full">
-                  +
-                </span>
+                <span className="absolute top-0 bg-primary text-xs text-white px-1 rounded-full">+</span>
               </button>
-              <button
-                className={`px-5  flex justify-center items-center bg-primary py-1 rounded-md text-white ${
-                  !isloggedIn && "hidden"
-                }`}
-              >
+              <button className={`px-5  flex justify-center items-center bg-primary py-1 rounded-md text-white ${!isloggedIn && "hidden"}`}>
                 <LoginIcon className="mx-2" /> Log in
               </button>
               <button onClick={toggleProfileNavModals}>
-                <img
-                  src="https://bukovskevrchy.pl/img/d43b5923dab8424859b9b68ed4bcdc61.jpg"
-                  alt="profile"
-                  className="w-12 h-12 object-cover rounded-full"
-                />
+                <img src="/static/images/default-profile.png" alt="profile" className="w-12 h-12 object-cover rounded-full" />
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div
-        className={`z-50 transition-all ${
-          isTopMenu ? "mobile:block" : "mobile:hidden"
-        } ${isNotificationModal ? "-translate-x-10" : "translate-x-96"}`}
-      >
+      <div className={`z-50 transition-all ${isTopMenu ? "mobile:block" : "mobile:hidden"} ${isNotificationModal ? "-translate-x-10" : "translate-x-96"}`}>
         <NotificationModal />
       </div>
-      <div
-        className={`z-50 transition-all ${
-          isTopMenu ? "mobile:block" : "mobile:hidden"
-        } ${isProfileMenuModal ? "translate-x-0" : "translate-x-96"}`}
-      >
+      <div className={`z-50 transition-all ${isTopMenu ? "mobile:block" : "mobile:hidden"} ${isProfileMenuModal ? "translate-x-0" : "translate-x-96"}`}>
         <ProfileMenuModal />
       </div>
     </>

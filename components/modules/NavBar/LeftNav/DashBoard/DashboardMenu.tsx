@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  HomeSubMenuIcon,
-  HeadPhonesIcon,
-  FileMusicIcon,
-  ArrowExpendUpRighIcon,
-  DownLoadOutlineIcon,
-  FilePlusIcon,
-  FavoriteIcon,
-} from "../../../../__modules/Vectors";
+import { HomeSubMenuIcon, HeadPhonesIcon, FileMusicIcon, ArrowExpendUpRighIcon, DownLoadOutlineIcon, FilePlusIcon, FavoriteIcon } from "../../../Vectors";
 
 const DashboardMenu = () => {
   return (

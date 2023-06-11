@@ -1,11 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import {
-  CategoryIcon,
-  MicIcon,
-  PlayCircleIcon,
-  HomeSubMenuIcon,
-} from "../../../../__modules/Vectors";
+import { CategoryIcon, MicIcon, PlayCircleIcon, HomeSubMenuIcon } from "../../../Vectors";
 
 const AdminSubmenu = () => {
   return (

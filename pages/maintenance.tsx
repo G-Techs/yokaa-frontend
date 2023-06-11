@@ -7,7 +7,6 @@ const maintenance = () => {
       <Maintenance />
     </div>
   );
-
 };
 
 export default maintenance;

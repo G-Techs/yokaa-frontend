@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AdminDashboard from "../modules/AdminDashboard";
-import PageCard from "../modules/__modules__/Card/PageCard";
+import PageCard from "../modules/layout/PageLayout";
 
 const AdminDashboardPage = () => {
   const [isTopNav, setIsTopNav] = useState(false);

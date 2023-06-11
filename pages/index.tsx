@@ -7,10 +7,7 @@ export default function Home() {
     <div className="h-screen bg-gray-100">
       <Head>
         <title>Yokaa</title>
-        <meta
-          name="description"
-          content="Yokaa music live streaming platform"
-        />
+        <meta name="description" content="Yokaa music live streaming platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LandingPage />

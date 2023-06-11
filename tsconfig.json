@@ -13,17 +13,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "components/modules/__modules__/_Vectors/wavePlayVector.jsx",
-    "components/modules/AddNewSinger/index.tsx",
-    "components/modules/utils/config/audioPlayer.tsx",
-    "components/modules/utils/config/audioControls.tsx",
-    "components/modules/__modules__/Carousel/index.jsx"
-  ],
+  "include": ["next-env.d.ts", "./**/*.ts", "./**/*.tsx"],
+
   "exclude": ["node_modules"]
 }
