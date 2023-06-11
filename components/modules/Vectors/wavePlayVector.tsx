@@ -2,16 +2,7 @@ import React, { FC } from "react";
 
 const VWave: FC<{ className: string }> = ({ className }) => {
   return (
-    <svg
-      version="1.1"
-      id="Icons"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="white"
-      x="0px"
-      y="0px"
-      viewBox="0 0 32 32"
-      className={className}
-    >
+    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" viewBox="0 0 32 32" className={className}>
       <g>
         <path d="M4,13c-0.6,0-1,0.4-1,1v4c0,0.6,0.4,1,1,1s1-0.4,1-1v-4C5,13.4,4.6,13,4,13z" />
         <path d="M8,11c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1s1-0.4,1-1v-8C9,11.4,8.6,11,8,11z" />

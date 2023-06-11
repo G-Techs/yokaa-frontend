@@ -1,5 +1,4 @@
-const URL =
-  "https://p.scdn.co/mp3-preview/40821a698364f0bf84b15bcc71a40ef813fff0e1?cid=f6a40776580943a7bc5173125a1e8832";
+const URL = "https://p.scdn.co/mp3-preview/40821a698364f0bf84b15bcc71a40ef813fff0e1?cid=f6a40776580943a7bc5173125a1e8832";
 
 export const songs = [
   {

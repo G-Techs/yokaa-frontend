@@ -1,7 +1,7 @@
 import React from "react";
 import HotSongs from "../modules/HotSongs";
 import TopSongs from "../modules/TopSongs/TopSongs";
-import PageCard from "../modules/__modules__/Card/PageCard";
+import PageCard from "../modules/layout/PageLayout";
 
 const LatestPage = () => {
   return (

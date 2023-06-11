@@ -56,9 +56,7 @@ const SignupPage = () => {
             Log In
           </p>
         </div>
-        <button className="bg-primary w-full py-3 mt-3 rounded-lg text-white hover:bg-opacity-80 transition-all">
-          Sign up
-        </button>
+        <button className="bg-primary w-full py-3 mt-3 rounded-lg text-white hover:bg-opacity-80 transition-all">Sign up</button>
       </div>
     </div>
   );

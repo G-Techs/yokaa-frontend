@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ./**/*.{ts,tsx,js}",
+    "prepare": "husky install",
+    "prettier:check": "prettier --config .prettierrc ./**/*.{ts,tsx,js,jsx} --check",
+    "prettier:format": "prettier --config .prettierrc ./**/*.{ts,tsx,js,jsx} --write",
+    "release": "release-it"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -28,8 +32,20 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "autoprefixer": "^10.4.13",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
     "postcss": "^8.4.20",
+    "prettier": "^2.8.8",
+    "release-it": "^15.11.0",
     "tailwindcss": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.@(js|jsx|ts|tsx)": [
+      "npm run prettier:check",
+      "npm run lint"
+    ]
   }
 }

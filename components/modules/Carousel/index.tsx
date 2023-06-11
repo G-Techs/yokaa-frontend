@@ -1,6 +1,6 @@
 import React, { FC, ReactNode, useRef } from "react";
-import { useSideScroll } from "../../hooks";
-import { ArrowLeftIcon, ArrowRightIcon } from "../../__modules/Vectors";
+import { useSideScroll } from "../hooks";
+import { ArrowLeftIcon, ArrowRightIcon } from "../Vectors";
 
 interface CarouselProps {
   className: string;
@@ -9,31 +9,16 @@ interface CarouselProps {
   height?: number;
 }
 
-const Carousel: FC<CarouselProps> = ({
-  className,
-  title,
-  children,
-  height,
-}) => {
+const Carousel: FC<CarouselProps> = ({ className, title, children, height }) => {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const sideScroll = useSideScroll();
 
   const onScrollLeft = () => {
-    sideScroll(
-      scrollContainer.current,
-      40,
-      200,
-      -(scrollContainer.current?.offsetWidth as number)
-    );
+    sideScroll(scrollContainer.current, 40, 200, -(scrollContainer.current?.offsetWidth as number));
   };
 
   const onScrollRight = () => {
-    sideScroll(
-      scrollContainer.current,
-      40,
-      200,
-      scrollContainer.current?.offsetWidth as number
-    );
+    sideScroll(scrollContainer.current, 40, 200, scrollContainer.current?.offsetWidth as number);
   };
   return (
     <div className={className}>

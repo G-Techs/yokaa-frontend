@@ -5,15 +5,9 @@ interface IProps {
 
 const AccountSettings: FC<IProps> = ({ isTopNav }) => {
   return (
-    <div
-      className={`mt-24 h-full flex justify-center mobile:flex-col mobile:mr-5 mobile:pb-40 transition-all ${
-        isTopNav && "mobile:mt-40 transition-all"
-      }`}
-    >
+    <div className={`mt-24 h-full flex justify-center mobile:flex-col mobile:mr-5 mobile:pb-40 transition-all ${isTopNav && "mobile:mt-40 transition-all"}`}>
       <div className="w-full border border-gray-200 p-10 bg-white shadow-sm rounded-md h-fit">
-        <h3 className="text-2xl font-bold py-5 border-b border-gray-200">
-          Account Setting
-        </h3>
+        <h3 className="text-2xl font-bold py-5 border-b border-gray-200">Account Setting</h3>
         <div>
           <div className="flex flex-col pt-4">
             <label htmlFor="userName" className="py-3">
@@ -48,15 +42,11 @@ const AccountSettings: FC<IProps> = ({ isTopNav }) => {
               className="py-2 px-3 bg-transparent border border-gray-200 outline-none focus:border-primary rounded-md transition-all"
             />
           </div>
-          <button className="mt-5 py-2 px-20 mobilesm:w-full rounded-md bg-primary bg-opacity-80 hover:bg-opacity-100 transition-all font-bold text-white">
-            Submit
-          </button>
+          <button className="mt-5 py-2 px-20 mobilesm:w-full rounded-md bg-primary bg-opacity-80 hover:bg-opacity-100 transition-all font-bold text-white">Submit</button>
         </div>
       </div>
       <div className="w-full border border-gray-200 p-10 bg-white shadow-sm rounded-md mx-5 mobile:mx-0 mobile:mt-5">
-        <h3 className="text-2xl font-bold py-5 border-b border-gray-200">
-          Social Media
-        </h3>
+        <h3 className="text-2xl font-bold py-5 border-b border-gray-200">Social Media</h3>
         <div>
           <div className="flex flex-col pt-4">
             <label htmlFor="facebook" className="py-3">
@@ -103,9 +93,7 @@ const AccountSettings: FC<IProps> = ({ isTopNav }) => {
             />
           </div>
         </div>
-        <button className="mt-5 py-2 px-20 rounded-md mobilesm:w-full bg-primary bg-opacity-80 hover:bg-opacity-100 transition-all font-bold text-white">
-          Submit
-        </button>
+        <button className="mt-5 py-2 px-20 rounded-md mobilesm:w-full bg-primary bg-opacity-80 hover:bg-opacity-100 transition-all font-bold text-white">Submit</button>
       </div>
     </div>
   );

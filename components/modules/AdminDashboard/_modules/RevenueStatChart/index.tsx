@@ -1,12 +1,15 @@
 import React from "react";
-import Chart from "chart.js/auto";
-import { Bar } from "react-chartjs-2";
+import { CategoryScale, Chart as ChartJS, LinearScale, LineController, BarElement } from "chart.js";
+import { Chart } from "react-chartjs-2";
 import { dummyStat } from "../../../utils/dummy/dummyStat";
+
+ChartJS.register([CategoryScale, LinearScale, LineController, BarElement]);
 
 const RevenueStatChart = () => {
   return (
     <div className="w-full bg-white p-5 shadow-xl rounded-xl">
-      <Bar
+      <Chart
+        type="bar"
         height={400}
         width={600}
         options={{
@@ -23,14 +26,14 @@ const RevenueStatChart = () => {
           labels: dummyStat.duration,
           datasets: [
             {
-              //   id: dummyStat.stat.revenue.id,   // commented for now cause chart dataset does not contain id ( can be removed latter)
+              //  TODO: id: dummyStat.stat.revenue.id,   // commented for now cause chart dataset does not contain id ( can be removed latter)
               label: dummyStat.stat.revenue.name,
               data: dummyStat.stat.revenue.dataPerMonth,
               backgroundColor: "rgb(255, 69, 50)",
               borderRadius: 100,
             },
             {
-              //   id: dummyStat.stat.netProfit.id, // commented for now cause chart dataset does not contain id ( can be removed latter)
+              // TODO:  id: dummyStat.stat.netProfit.id, // commented for now cause chart dataset does not contain id ( can be removed latter)
               label: dummyStat.stat.netProfit.name,
               data: dummyStat.stat.netProfit.dataPerMonth,
               backgroundColor: "rgb(0, 208, 755)",

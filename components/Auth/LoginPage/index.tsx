@@ -36,16 +36,11 @@ const LoginPage = () => {
         </div>
         <div className="flex justify-start w-[-webkit-fill-available] py-2">
           You don&apos;t have an account ?
-          <span
-            className="text-primary text-left px-2 cursor-pointer"
-            onClick={() => router.push("/signup")}
-          >
+          <span className="text-primary text-left px-2 cursor-pointer" onClick={() => router.push("/signup")}>
             Sign up
           </span>
         </div>
-        <button className="bg-primary hover:bg-opacity-80 transition-all w-full py-3 mt-3 rounded-lg text-white">
-          Log in
-        </button>
+        <button className="bg-primary hover:bg-opacity-80 transition-all w-full py-3 mt-3 rounded-lg text-white">Log in</button>
       </div>
     </div>
   );

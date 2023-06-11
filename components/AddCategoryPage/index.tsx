@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import AddCategory from "../modules/AddCategory";
-import PageCard from "../modules/__modules__/Card/PageCard";
+import PageCard from "../modules/layout/PageLayout";
 
 const AddCategoryPage = () => {
-  const [isTopNav, setIsTopNav] = useState(false);
-  
+  const [_, setIsTopNav] = useState(false);
+
   return (
     <PageCard setIsTopNav={setIsTopNav}>
-      <AddCategory  />
+      <AddCategory />
     </PageCard>
   );
 };

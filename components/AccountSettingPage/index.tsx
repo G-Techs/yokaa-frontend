@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AccountSettings from "../modules/AccountSettings";
-import PageCard from "../modules/__modules__/Card/PageCard";
+import PageCard from "../modules/layout/PageLayout";
 
 const AccountSettingsPage = () => {
   const [isTopNav, setIsTopNav] = useState(false);
