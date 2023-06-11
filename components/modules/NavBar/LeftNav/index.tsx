@@ -4,7 +4,7 @@ import { leftNavPinedAtom, openMenuAtom } from "../../../lib/atoms";
 import { MoonIcon, SunIcon, CloseIcon, PinIcon } from "../../Vectors";
 import NavContentIcons from "./NavContentIcons";
 import AdminMenu from "./AdminMenu";
-import DashBord from "./DashBoard/DashboardMenu";
+import DashBord from "./DashBoard";
 
 const LeftNav = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
